@@ -32,18 +32,14 @@ def home():
 def predict_animal():
     data = request.json
     
-    # Ensure all required fields are provided
     required_fields = ['AnimalName', 'symptoms1', 'symptoms2', 'symptoms3', 'symptoms4', 'symptoms5']
     if not all(field in data for field in required_fields):
         return jsonify({'error': 'Missing required fields'}), 400
     
-    # Prepare the input data
     input_df = pd.DataFrame([data])
     
-    # Ensure the columns are in the same order as during training
     input_df = input_df[required_fields]
     
-    # Preprocess the input data (categorical encoding)
     input_encoded = preprocessor.transform(input_df).toarray()
     
     # Make prediction
@@ -59,17 +55,15 @@ def predict_animal():
 
 @app.route('/check_comment_toxicity', methods=['POST'])
 def predict_toxicity():
-    # Get the comment from the request
+  
     data = request.json
     comment_text = data['text']
     
-    # Vectorize the input text
     vectorized_text = vectorizer([comment_text])
     
-    # Make a prediction using the model
     prediction = (toxicity_model.predict(vectorized_text) > 0.5).astype(int).tolist()
     
-    # Send the prediction as a response
+
     return jsonify({'prediction': prediction})
 
 if __name__ == '__main__':
