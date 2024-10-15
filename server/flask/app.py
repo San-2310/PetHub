@@ -4,6 +4,9 @@ from tensorflow.keras.layers import TextVectorization
 import numpy as np
 import pandas as pd
 import joblib
+from reportanalysis.report_analyzer import analyze_reports
+import os
+import io
 
 app = Flask(__name__)
 
@@ -55,7 +58,7 @@ def predict_animal():
 
 @app.route('/check_comment_toxicity', methods=['POST'])
 def predict_toxicity():
-  
+    
     data = request.json
     comment_text = data['text']
     
@@ -63,8 +66,31 @@ def predict_toxicity():
     
     prediction = (toxicity_model.predict(vectorized_text) > 0.5).astype(int).tolist()
     
-
     return jsonify({'prediction': prediction})
+
+@app.route('/analyze_medical_reports', methods=['POST'])
+def analyze_medical_reports():
+    if 'files' not in request.files:
+        return jsonify({'error': 'No files part in the request'}), 400
+    
+    files = request.files.getlist('files')
+    
+    if not files or files[0].filename == '':
+        return jsonify({'error': 'No files selected for uploading'}), 400
+    
+    try:
+        file_objects = []
+        for file in files:
+            # Create a BytesIO object and write the file content to it
+            file_object = io.BytesIO(file.read())
+            file_object.name = file.filename  # Add the filename attribute
+            file_objects.append(file_object)
+        
+        results = analyze_reports(file_objects)
+        
+        return jsonify({'analysis': results})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
