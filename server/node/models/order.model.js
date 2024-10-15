@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const { productSchema } = require("./product");
+const { productSchema } = require("./product.model.js");
 
 const orderSchema = mongoose.Schema({
   products: [
