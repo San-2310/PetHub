@@ -4,6 +4,8 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRouter from "./routes/userRoutes.js";
 import petRouter from "./routes/petRoutes.js";
+import productRouter from "./routes/productRoutes.js";
+import orderRouter from "./routes/orderRoutes.js";
 
 const app = express();
 
@@ -26,9 +28,10 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // Routes
-
 app.use('/api/users/', userRouter);
 app.use('/api/pets/', petRouter);
+app.use('/api/products/', productRouter);
+app.use('/api/orders/', orderRouter);
 
 // MongoDB Connection
 const connectDB = async () => {
