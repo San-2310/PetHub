@@ -6,6 +6,8 @@ import userRouter from "./routes/userRoutes.js";
 import petRouter from "./routes/petRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
+import insuranceRouter from "./routes/insuranceRoutes.js"; // Added insurance routes
+import claimRouter from "./routes/claimRoutes.js"; // Added claim routes
 
 const app = express();
 
@@ -32,6 +34,8 @@ app.use('/api/users/', userRouter);
 app.use('/api/pets/', petRouter);
 app.use('/api/products/', productRouter);
 app.use('/api/orders/', orderRouter);
+app.use('/api/insurance/', insuranceRouter); // Added route for insurance
+app.use('/api/claims/', claimRouter); // Added route for claims
 
 // MongoDB Connection
 const connectDB = async () => {
@@ -53,7 +57,7 @@ connectDB()
     const port = 8000;
 
     app.on("Error", (error) => {
-      console.log("APP ERROR:", error);
+      console.error("APP ERROR:", error);
       throw error;
     });
 
@@ -62,7 +66,7 @@ connectDB()
     });
   })
   .catch((err) => {
-    console.log("MongoDB CONNECTION FAILED:", err);
+    console.error("MongoDB CONNECTION FAILED:", err);
   });
 
 export { app };
