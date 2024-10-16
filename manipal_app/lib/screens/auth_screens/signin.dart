@@ -5,13 +5,14 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:manipal_app/auth_screens/login.dart';
+import 'package:manipal_app/components/navbar.dart';
+import 'package:manipal_app/screens/auth_screens/login.dart';
 import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/components/primary_icon_button.dart';
 import 'package:manipal_app/components/text_field_input.dart';
 import 'package:manipal_app/components/utils.dart';
 import 'package:manipal_app/controllers/auth_controller.dart';
-import 'package:manipal_app/home_screen.dart';
+import 'package:manipal_app/screens/home_screen/home_screen.dart';
 import 'package:manipal_app/resources/auth_methods.dart';
 
 
@@ -63,7 +64,7 @@ class _SignInScreenState extends State<SignInScreen> {
       showSnackBar(res, context);
     } else {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => MainLayout()),
       );
     }
   }

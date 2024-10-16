@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:manipal_app/auth_screens/login.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:manipal_app/screens/auth_screens/login.dart';
 import 'package:manipal_app/firebase_options.dart';
 import 'package:manipal_app/resources/user_provider.dart';
+import 'package:manipal_app/screens/splashscreen.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -25,10 +27,10 @@ class MyApp extends StatelessWidget {
           create: (_) => UserProvider(),
         )
       ],
-    child: MaterialApp(
+    child: GetMaterialApp(
       debugShowCheckedModeBanner: false,
       //theme: ThemeData.light(),
-      home: LoginScreen(),
+      home: SplashScreen(),
     ),
     );
   }

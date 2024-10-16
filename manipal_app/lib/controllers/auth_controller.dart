@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:manipal_app/home_screen.dart';
+import 'package:manipal_app/screens/home_screen/home_screen.dart';
 
 class AuthController extends GetxController {
   final auth = FirebaseAuth.instance;
