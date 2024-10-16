@@ -1,5 +1,6 @@
 import Pet from '../models/pet.model.js';
 import QRCode from 'qrcode';
+import upload from '../config/multerconfig.js';
 
 const generateQRCode = async (petData) => {
   try {
@@ -16,8 +17,8 @@ const generateQRCode = async (petData) => {
     throw error;
   }
 };
-
-export const saveOrUpdatePet = async (req, res) => {
+//
+export const saveOrUpdatePet = (upload.single('image'),async function (req, res){
   try {
     const { petId, ...petData } = req.body;
 
@@ -34,14 +35,14 @@ export const saveOrUpdatePet = async (req, res) => {
 
     // Generate QR code
     pet.qrCodeLink = await generateQRCode(pet);
-
+    pet.pic=req.file.filename;
     await pet.save();
 
     res.status(200).json({ success: true, data: pet });
   } catch (error) {
     res.status(400).json({ success: false, error: error.message });
   }
-};
+});
 
 export const getPet = async (req, res) => {
   try {
