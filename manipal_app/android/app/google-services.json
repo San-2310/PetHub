@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "809418704719",
+    "project_id": "manipal-e7134",
+    "storage_bucket": "manipal-e7134.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809418704719:android:99371ebc1664efa6a2673a",
+        "android_client_info": {
+          "package_name": "com.example.manipal_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809418704719-97s834nh9ov9fvrfg4ajv7tamuo0edc7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3ZMEG5Scl5qfhsxgnnMCbZc8syPAPk7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809418704719-97s834nh9ov9fvrfg4ajv7tamuo0edc7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
