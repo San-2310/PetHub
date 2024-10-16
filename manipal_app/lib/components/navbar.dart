@@ -186,7 +186,7 @@ class _MainLayoutState extends State<MainLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(() => navBody[controller.currentNavIndex.value]),
-      backgroundColor: AppColors.paleGreen,
+      backgroundColor: Colors.white,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Obx(() => SizedBox(
         width: 60,
@@ -195,16 +195,18 @@ class _MainLayoutState extends State<MainLayout> {
           onPressed: () => controller.currentNavIndex.value = 2,
           shape: const CircleBorder(),
           backgroundColor: controller.currentNavIndex.value == 2 
-              ? AppColors.darkGreen 
+              ? AppColors.paleGreen 
               : AppColors.paleGreen,
           child: Image.asset(
             "assets/Icons/home.png",
             width: 30,
             height: 30,
+            color: controller.currentNavIndex.value == 2 ? Colors.black:AppColors.lightGray,
           ),
         ),
       )),
       bottomNavigationBar: Obx(() => BottomAppBar(
+        color: AppColors.paleGreen,
         surfaceTintColor: Colors.white,
         shadowColor: Colors.black,
         elevation: 1,

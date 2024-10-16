@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:manipal_app/components/consts.dart';
 import 'package:manipal_app/screens/auth_screens/login.dart';
 import 'package:manipal_app/firebase_options.dart';
 import 'package:manipal_app/resources/user_provider.dart';
@@ -9,6 +11,7 @@ import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  Gemini.init(apiKey: gemini_api_key);
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

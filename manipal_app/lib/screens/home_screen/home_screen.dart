@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List catArr = [
     {"image": "assets/Icons/service.png", "name": "Pet Grooming"},
     {"image": "assets/Icons/service.png", "name": "Pet Travel Planning"},
-    {"image": "assets/Icons/service.png", "name": "Pet babysitting"},
+    {"image": "assets/svg/babysitting.png", "name": "Pet babysitting"},
     {"image": "assets/Icons/service.png", "name": "Photoshoot"},
     {"image": "assets/Icons/service.png", "name": "Pet Training"},
   ];
