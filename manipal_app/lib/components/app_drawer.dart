@@ -4,7 +4,7 @@ import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/components/navbar.dart';
 import 'package:manipal_app/screens/adopt_pets/adopt_pet_screen.dart';
 import 'package:manipal_app/screens/home_screen/home_screen.dart';
-import 'package:manipal_app/screens/insuarance/insuarance_screen.dart';
+import 'package:manipal_app/screens/insurance/insurance_screen.dart';
 import 'package:manipal_app/screens/pet_travel/pet_travel_screen.dart';
 
 class AppDrawer extends StatelessWidget {
