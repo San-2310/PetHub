@@ -30,6 +30,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  // Array of references to the Pet model
+  pets: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Pet'
+  }],
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);
