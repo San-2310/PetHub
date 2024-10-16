@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:manipal_app/models/user.dart';
 import 'package:manipal_app/resources/auth_methods.dart';
 
+
 class UserProvider with ChangeNotifier{
   User? _user;
   final AuthMethods _authMethods = AuthMethods();

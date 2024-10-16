@@ -143,15 +143,34 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/components/tab_button.dart';
+import 'package:manipal_app/resources/user_provider.dart';
 import 'package:manipal_app/screens/health_screen/health_screen.dart';
 import 'package:manipal_app/screens/ecommerce_screen/ecommerce_screen.dart';
 import 'package:manipal_app/screens/home_screen/home_screen.dart';
 import 'package:manipal_app/screens/community_screen/community_screen.dart';
 import 'package:manipal_app/screens/user_profile_screen/user_screen.dart';
 import 'package:manipal_app/controllers/home_controller.dart';
+import 'package:provider/provider.dart';
 
-class MainLayout extends StatelessWidget {
+class MainLayout extends StatefulWidget {
   MainLayout({Key? key}) : super(key: key);
+
+  @override
+  State<MainLayout> createState() => _MainLayoutState();
+}
+
+class _MainLayoutState extends State<MainLayout> {
+
+  @override
+  void initState(){
+    super.initState();
+    addData();
+  }
+
+  addData() async{
+    UserProvider _userProvider = Provider.of(context, listen:false);
+    await _userProvider.refreshUser();
+  }
 
   final controller = Get.put(HomeController());
 
