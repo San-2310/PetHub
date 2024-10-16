@@ -1,0 +1,501 @@
+Id,breed,recipe_name,cooking_method,ingredients[0].name,ingredients[1].name,ingredients[2].name,ingredients[3].name,ingredients[4].name,ingredients[5].name
+1,Vikhan Sheepdog,Banana Chunks with Ghee,Steamed,Banana,Ghee,Rice,Okra,Eggs,
+2,Indian Spitz,Banana Pulao with Goat,Boiled,Banana,Goat,Spinach,Oats,Ghee,
+3,Vikhan Sheepdog,Banana Pulao with Fenugreek Seeds,Boiled,Banana,Fenugreek Seeds,Lentils,Bottle Gourd,Wheat,
+4,Bully Kutta,Peas Khichdi with Wheat,Slow-cooked,Peas,Wheat,Lamb,,,
+5,Kombai,Okra Chunks with Cucumber,Raw,Okra,Cucumber,Rice,Chicken,,
+6,Vikhan Sheepdog,Fenugreek Seeds Curry with Soya Chunks,Boiled,Fenugreek Seeds,Soya Chunks,Apple,Spinach,Bajra,Peas
+7,Indian Spitz,Banana Mash with Soya Chunks,Stir-fried,Banana,Soya Chunks,Jowar,Green Beans,,
+8,Pandikona,Pomegranate Pulao with Ghee,Steamed,Pomegranate,Ghee,Bottle Gourd,Paneer,Sweet Potato,
+9,Bully Kutta,Pomegranate Paratha with Ghee,Stir-fried,Pomegranate,Ghee,Bottle Gourd,Oats,Okra,Soya Chunks
+10,Kaikadi,Ridge Gourd Mash with Lamb,Pressure-cooked,Ridge Gourd,Lamb,Bajra,Pomegranate,,
+11,Kaikadi,Okra Pulao with Bottle Gourd,Stir-fried,Okra,Bottle Gourd,Ghee,Papaya,Oats,Goat
+12,Gaddi Kutta,Lamb Stew with Sweet Potato,Slow-cooked,Lamb,Sweet Potato,Peas,Mango,,
+13,Rajapalayam,Ridge Gourd Chunks with Sweet Potato,Baked,Ridge Gourd,Sweet Potato,Lentils,Cucumber,,
+14,Tangkhul Hui,Apple Chunks with Fenugreek Seeds,Raw,Apple,Fenugreek Seeds,Carrots,Eggs,Ridge Gourd,Jowar
+15,Mudhol Hound,Bottle Gourd Stew with Bajra,Baked,Bottle Gourd,Bajra,Paneer,,,
+16,Pandikona,Spinach Pulao with Ridge Gourd,Steamed,Spinach,Ridge Gourd,Oats,Turmeric,Goat,Watermelon
+17,Gaddi Kutta,Rice Stew with Spinach,Boiled,Rice,Spinach,Turmeric,Cucumber,Goat,Bottle Gourd
+18,Bangkaew,Ridge Gourd Curry with Jowar,Stir-fried,Ridge Gourd,Jowar,Papaya,Paneer,Coconut Oil,Peas
+19,Pandikona,Ghee Khichdi with Papaya,Slow-cooked,Ghee,Papaya,Bajra,Eggs,Peas,
+20,Tibetan Mastiff,Carrots Pulao with Pumpkin,Slow-cooked,Carrots,Pumpkin,Lentils,,,
+21,Kombai,Eggs Paratha with Curd,Baked,Eggs,Curd,Bitter Gourd,Jowar,Watermelon,Bottle Gourd
+22,Indian Spitz,Wheat Curry with Curd,Slow-cooked,Wheat,Curd,Peas,Paneer,Mango,Peas
+23,Himalayan Cat,Pumpkin Paratha with Apple,Boiled,Pumpkin,Apple,Soya Chunks,Flaxseed,Okra,
+24,Chippiparai,Okra Mash with Flaxseed,Stir-fried,Okra,Flaxseed,Banana,Sweet Potato,Lamb,
+25,Mudhol Hound,Oats Paratha with Watermelon,Slow-cooked,Oats,Watermelon,Bitter Gourd,Chicken,,
+26,Kaikadi,Banana Paratha with Rice,Stir-fried,Banana,Rice,Ghee,Bitter Gourd,Paneer,
+27,Chippiparai,Carrots Paratha with Chicken,Baked,Carrots,Chicken,Pumpkin,,,
+28,Vikhan Sheepdog,Okra Khichdi with Lentils,Raw,Okra,Lentils,Curd,Bitter Gourd,Watermelon,Rice
+29,Rajapalayam,Bajra Stew with Pomegranate,Boiled,Bajra,Pomegranate,Green Beans,Flaxseed,Chicken,
+30,Mudhol Hound,Spinach Stew with Lentils,Boiled,Spinach,Lentils,Jowar,Cucumber,Green Beans,Coconut Oil
+31,Indian Spitz,Eggs Chunks with Bitter Gourd,Baked,Eggs,Bitter Gourd,Pumpkin,,,
+32,Tangkhul Hui,Soya Chunks Pulao with Green Beans,Pressure-cooked,Soya Chunks,Green Beans,Oats,,,
+33,Vikhan Sheepdog,Bottle Gourd Paratha with Apple,Raw,Bottle Gourd,Apple,Wheat,Curd,Carrots,Eggs
+34,Bakharwal Dog,Oats Mash with Lamb,Stir-fried,Oats,Lamb,Okra,Watermelon,,
+35,Jonangi,Bitter Gourd Pulao with Goat,Boiled,Bitter Gourd,Goat,Bajra,Apple,,
+36,Bangkaew,Fenugreek Seeds Chunks with Bajra,Baked,Fenugreek Seeds,Bajra,Lamb,Cucumber,Spinach,
+37,Indian Pariah Dog,Bajra Stew with Ridge Gourd,Raw,Bajra,Ridge Gourd,Paneer,Curd,Pomegranate,
+38,Indian Bicolor Cat,Bitter Gourd Stew with Pumpkin,Stir-fried,Bitter Gourd,Pumpkin,Fish,,,
+39,Kaikadi,Sweet Potato Mash with Watermelon,Raw,Sweet Potato,Watermelon,Bitter Gourd,Fish,Ghee,
+40,Indian Bicolor Cat,Lentils Stew with Carrots,Boiled,Lentils,Carrots,Turmeric,Watermelon,Pumpkin,
+41,Chippiparai,Okra Pulao with Goat,Baked,Okra,Goat,Rice,,,
+42,Tibetan Mastiff,Eggs Paratha with Turmeric,Steamed,Eggs,Turmeric,Spinach,Spinach,Pumpkin,Banana
+43,Chippiparai,Green Beans Curry with Soya Chunks,Steamed,Green Beans,Soya Chunks,Oats,,,
+44,Vikhan Sheepdog,Curd Khichdi with Lamb,Stir-fried,Curd,Lamb,Sweet Potato,Ridge Gourd,Carrots,Watermelon
+45,Pandikona,Wheat Chunks with Soya Chunks,Boiled,Wheat,Soya Chunks,Spinach,Fenugreek Seeds,Mango,
+46,Bully Kutta,Coconut Oil Mash with Eggs,Steamed,Coconut Oil,Eggs,Pomegranate,Okra,Bajra,
+47,Tangkhul Hui,Apple Chunks with Peas,Baked,Apple,Peas,Paneer,Pumpkin,,
+48,Kanni,Rice Curry with Ridge Gourd,Stir-fried,Rice,Ridge Gourd,Goat,,,
+49,Gaddi Kutta,Bitter Gourd Pulao with Mango,Pressure-cooked,Bitter Gourd,Mango,Lentils,Sweet Potato,,
+50,Bakharwal Dog,Rice Pulao with Lamb,Pressure-cooked,Rice,Lamb,Ridge Gourd,Banana,,
+51,Rajapalayam,Peas Chunks with Rice,Baked,Peas,Rice,Curd,Goat,Watermelon,
+52,Rajapalayam,Banana Stew with Curd,Stir-fried,Banana,Curd,Oats,Lentils,Peas,Ridge Gourd
+53,Tangkhul Hui,Eggs Curry with Green Beans,Pressure-cooked,Eggs,Green Beans,Banana,Peas,Flaxseed,Bajra
+54,Bangkaew,Peas Pulao with Peas,Baked,Peas,Peas,Oats,Curd,Fish,Watermelon
+55,Chippiparai,Wheat Curry with Goat,Steamed,Wheat,Goat,Peas,Papaya,,
+56,Jonangi,Sweet Potato Paratha with Carrots,Boiled,Sweet Potato,Carrots,Eggs,,,
+57,Himalayan Cat,Jowar Chunks with Peas,Boiled,Jowar,Peas,Eggs,,,
+58,Tibetan Mastiff,Bottle Gourd Chunks with Eggs,Raw,Bottle Gourd,Eggs,Wheat,Banana,,
+59,Jonangi,Carrots Stew with Spinach,Baked,Carrots,Spinach,Rice,Lamb,Ghee,Papaya
+60,Jonangi,Apple Stew with Rice,Raw,Apple,Rice,Eggs,Green Beans,Okra,Coconut Oil
+61,Kaikadi,Pumpkin Stew with Spinach,Steamed,Pumpkin,Spinach,Chicken,,,
+62,Bakharwal Dog,Sweet Potato Curry with Curd,Raw,Sweet Potato,Curd,Cucumber,Carrots,Eggs,
+63,Indian Spitz,Lentils Curry with Jowar,Stir-fried,Lentils,Jowar,Ridge Gourd,Apple,,
+64,Tibetan Mastiff,Fish Khichdi with Carrots,Boiled,Fish,Carrots,Sweet Potato,Cucumber,,
+65,Bangkaew,Green Beans Pulao with Watermelon,Baked,Green Beans,Watermelon,Ragi,Goat,,
+66,Indian Pariah Dog,Apple Pulao with Eggs,Stir-fried,Apple,Eggs,Jowar,Spinach,,
+67,Tibetan Mastiff,Soya Chunks Pulao with Watermelon,Raw,Soya Chunks,Watermelon,Pumpkin,Bottle Gourd,Coconut Oil,
+68,Mudhol Hound,Spinach Khichdi with Ragi,Stir-fried,Spinach,Ragi,Soya Chunks,,,
+69,Rajapalayam,Eggs Khichdi with Bitter Gourd,Slow-cooked,Eggs,Bitter Gourd,Bajra,,,
+70,Gaddi Kutta,Bottle Gourd Mash with Soya Chunks,Steamed,Bottle Gourd,Soya Chunks,Pumpkin,,,
+71,Rampur Greyhound,Paneer Paratha with Papaya,Pressure-cooked,Paneer,Papaya,Bitter Gourd,Flaxseed,Oats,Bottle Gourd
+72,Jonangi,Spinach Pulao with Apple,Slow-cooked,Spinach,Apple,Pumpkin,Paneer,Curd,Bottle Gourd
+73,Pandikona,Pumpkin Chunks with Chicken,Slow-cooked,Pumpkin,Chicken,Watermelon,Spinach,,
+74,Indian Pariah Dog,Watermelon Curry with Carrots,Slow-cooked,Watermelon,Carrots,Pumpkin,Curd,Chicken,
+75,Mudhol Hound,Oats Khichdi with Paneer,Steamed,Oats,Paneer,Okra,,,
+76,Tibetan Mastiff,Pomegranate Pulao with Chicken,Steamed,Pomegranate,Chicken,Oats,Ridge Gourd,,
+77,Jonangi,Soya Chunks Khichdi with Ridge Gourd,Baked,Soya Chunks,Ridge Gourd,Oats,,,
+78,Chippiparai,Ridge Gourd Mash with Coconut Oil,Slow-cooked,Ridge Gourd,Coconut Oil,Green Beans,Goat,Apple,Jowar
+79,Vikhan Sheepdog,Carrots Curry with Wheat,Stir-fried,Carrots,Wheat,Eggs,,,
+80,Vikhan Sheepdog,Wheat Paratha with Banana,Stir-fried,Wheat,Banana,Green Beans,Soya Chunks,,
+81,Indian Spitz,Peas Khichdi with Mango,Raw,Peas,Mango,Paneer,Ragi,,
+82,Tibetan Mastiff,Apple Stew with Ridge Gourd,Raw,Apple,Ridge Gourd,Carrots,Ghee,Rice,Goat
+83,Himalayan Cat,Green Beans Stew with Pumpkin,Boiled,Green Beans,Pumpkin,Watermelon,Lamb,Curd,Carrots
+84,Mudhol Hound,Pomegranate Pulao with Green Beans,Pressure-cooked,Pomegranate,Green Beans,Coconut Oil,Rice,Eggs,
+85,Gaddi Kutta,Oats Paratha with Spinach,Steamed,Oats,Spinach,Fish,,,
+86,Pandikona,Peas Paratha with Fish,Slow-cooked,Peas,Fish,Jowar,,,
+87,Kaikadi,Soya Chunks Stew with Papaya,Slow-cooked,Soya Chunks,Papaya,Spinach,Ragi,,
+88,Tangkhul Hui,Soya Chunks Stew with Ridge Gourd,Stir-fried,Soya Chunks,Ridge Gourd,Watermelon,Rice,Ghee,
+89,Bully Kutta,Lentils Stew with Watermelon,Pressure-cooked,Lentils,Watermelon,Bitter Gourd,Rice,,
+90,Mudhol Hound,Soya Chunks Paratha with Okra,Stir-fried,Soya Chunks,Okra,Ghee,Rice,Apple,Green Beans
+91,Tibetan Mastiff,Papaya Stew with Goat,Slow-cooked,Papaya,Goat,Ragi,Coconut Oil,Bottle Gourd,
+92,Vikhan Sheepdog,Banana Mash with Pumpkin,Slow-cooked,Banana,Pumpkin,Soya Chunks,Okra,,
+93,Rajapalayam,Paneer Curry with Turmeric,Steamed,Paneer,Turmeric,Oats,Spinach,Apple,
+94,Bangkaew,Pomegranate Stew with Bajra,Raw,Pomegranate,Bajra,Ghee,Bottle Gourd,Chicken,
+95,Indian Bicolor Cat,Jowar Curry with Curd,Slow-cooked,Jowar,Curd,Bitter Gourd,Lentils,Okra,Watermelon
+96,Bangkaew,Bitter Gourd Stew with Pumpkin,Steamed,Bitter Gourd,Pumpkin,Lamb,,,
+97,Kaikadi,Carrots Stew with Fish,Steamed,Carrots,Fish,Ragi,Pomegranate,Fenugreek Seeds,Bitter Gourd
+98,Jonangi,Carrots Pulao with Wheat,Steamed,Carrots,Wheat,Mango,Flaxseed,Lentils,
+99,Kombai,Papaya Mash with Paneer,Stir-fried,Papaya,Paneer,Bottle Gourd,Bajra,,
+100,Tibetan Mastiff,Chicken Paratha with Rice,Steamed,Chicken,Rice,Flaxseed,Peas,Pomegranate,Ridge Gourd
+,Kombai,Turmeric Chunks with Apple,Boiled,Turmeric,Apple,Soya Chunks,Spinach,Oats,
+,Tibetan Mastiff,Eggs Stew with Wheat,Steamed,Eggs,Wheat,Spinach,Apple,,
+,Kombai,Carrots Mash with Jowar,Stir-fried,Carrots,Jowar,Turmeric,Lentils,Carrots,Pomegranate
+,Indian Pariah Dog,Green Beans Chunks with Paneer,Raw,Green Beans,Paneer,Bajra,Papaya,Coconut Oil,
+,Kaikadi,Papaya Mash with Spinach,Slow-cooked,Papaya,Spinach,Jowar,Chicken,,
+,Kombai,Peas Chunks with Watermelon,Baked,Peas,Watermelon,Soya Chunks,Wheat,,
+,Bangkaew,Carrots Stew with Lentils,Boiled,Carrots,Lentils,Watermelon,Coconut Oil,Wheat,
+,Vikhan Sheepdog,Pomegranate Mash with Goat,Raw,Pomegranate,Goat,Oats,Bitter Gourd,,
+,Tibetan Mastiff,Fenugreek Seeds Paratha with Papaya,Baked,Fenugreek Seeds,Papaya,Carrots,Goat,Oats,
+,Indian Pariah Dog,Ragi Khichdi with Bitter Gourd,Boiled,Ragi,Bitter Gourd,Coconut Oil,Eggs,Cucumber,
+,Tibetan Mastiff,Jowar Curry with Ridge Gourd,Steamed,Jowar,Ridge Gourd,Paneer,Papaya,Carrots,Turmeric
+,Jonangi,Carrots Chunks with Flaxseed,Slow-cooked,Carrots,Flaxseed,Paneer,Watermelon,Bajra,
+,Mudhol Hound,Bottle Gourd Mash with Jowar,Raw,Bottle Gourd,Jowar,Goat,,,
+,Kombai,Fish Khichdi with Okra,Stir-fried,Fish,Okra,Pumpkin,,,
+,Indian Pariah Dog,Soya Chunks Mash with Pumpkin,Slow-cooked,Soya Chunks,Pumpkin,Green Beans,Banana,,
+,Kaikadi,Jowar Pulao with Eggs,Boiled,Jowar,Eggs,Apple,Okra,,
+,Chippiparai,Ridge Gourd Mash with Ragi,Steamed,Ridge Gourd,Ragi,Eggs,,,
+,Tibetan Mastiff,Chicken Mash with Oats,Steamed,Chicken,Oats,Spinach,,,
+,Himalayan Cat,Wheat Curry with Bottle Gourd,Steamed,Wheat,Bottle Gourd,Chicken,,,
+,Pandikona,Carrots Khichdi with Lentils,Boiled,Carrots,Lentils,Oats,,,
+,Bully Kutta,Goat Curry with Green Beans,Steamed,Goat,Green Beans,Spinach,Apple,Curd,Bajra
+,Kanni,Spinach Curry with Apple,Raw,Spinach,Apple,Chicken,Jowar,,
+,Kanni,Paneer Curry with Ragi,Raw,Paneer,Ragi,Bottle Gourd,,,
+,Tibetan Mastiff,Paneer Stew with Ghee,Baked,Paneer,Ghee,Apple,Carrots,Rice,Green Beans
+,Pandikona,Cucumber Mash with Soya Chunks,Steamed,Cucumber,Soya Chunks,Flaxseed,Spinach,Peas,Bajra
+,Kaikadi,Goat Paratha with Jowar,Baked,Goat,Jowar,Carrots,,,
+,Pandikona,Chicken Mash with Bottle Gourd,Pressure-cooked,Chicken,Bottle Gourd,Cucumber,Oats,,
+,Kaikadi,Chicken Chunks with Cucumber,Baked,Chicken,Cucumber,Green Beans,Pumpkin,Coconut Oil,
+,Indian Bicolor Cat,Banana Pulao with Pumpkin,Slow-cooked,Banana,Pumpkin,Carrots,Soya Chunks,,
+,Vikhan Sheepdog,Cucumber Chunks with Coconut Oil,Baked,Cucumber,Coconut Oil,Wheat,Spinach,Bottle Gourd,Soya Chunks
+,Indian Pariah Dog,Soya Chunks Mash with Bitter Gourd,Stir-fried,Soya Chunks,Bitter Gourd,Wheat,,,
+,Chippiparai,Lentils Curry with Okra,Pressure-cooked,Lentils,Okra,Apple,Sweet Potato,Coconut Oil,
+,Pandikona,Mango Pulao with Wheat,Baked,Mango,Wheat,Turmeric,Soya Chunks,Peas,Bottle Gourd
+,Kaikadi,Sweet Potato Stew with Apple,Steamed,Sweet Potato,Apple,Lamb,Fenugreek Seeds,Peas,
+,Tibetan Mastiff,Fenugreek Seeds Paratha with Lamb,Baked,Fenugreek Seeds,Lamb,Ragi,Carrots,Apple,
+,Tibetan Mastiff,Watermelon Chunks with Coconut Oil,Steamed,Watermelon,Coconut Oil,Fish,Jowar,Peas,Spinach
+,Vikhan Sheepdog,Eggs Mash with Turmeric,Boiled,Eggs,Turmeric,Sweet Potato,Green Beans,Mango,
+,Jonangi,Jowar Curry with Green Beans,Steamed,Jowar,Green Beans,Lamb,Mango,,
+,Kaikadi,Wheat Paratha with Curd,Stir-fried,Wheat,Curd,Okra,Watermelon,Lentils,
+,Gaddi Kutta,Okra Stew with Jowar,Pressure-cooked,Okra,Jowar,Pomegranate,Fish,,
+,Mudhol Hound,Pumpkin Khichdi with Banana,Raw,Pumpkin,Banana,Lentils,Peas,,
+,Himalayan Cat,Green Beans Khichdi with Pumpkin,Stir-fried,Green Beans,Pumpkin,Soya Chunks,Pomegranate,Green Beans,Turmeric
+,Tangkhul Hui,Watermelon Paratha with Wheat,Slow-cooked,Watermelon,Wheat,Soya Chunks,Carrots,,
+,Tangkhul Hui,Carrots Chunks with Rice,Raw,Carrots,Rice,Paneer,,,
+,Rajapalayam,Sweet Potato Chunks with Green Beans,Slow-cooked,Sweet Potato,Green Beans,Eggs,,,
+,Chippiparai,Paneer Khichdi with Bottle Gourd,Slow-cooked,Paneer,Bottle Gourd,Ragi,,,
+,Kombai,Spinach Pulao with Eggs,Boiled,Spinach,Eggs,Rice,,,
+,Jonangi,Ragi Paratha with Pomegranate,Pressure-cooked,Ragi,Pomegranate,Lentils,Green Beans,,
+,Himalayan Cat,Mango Stew with Lentils,Steamed,Mango,Lentils,Rice,Curd,Peas,Ridge Gourd
+,Kaikadi,Apple Mash with Ghee,Steamed,Apple,Ghee,Carrots,Paneer,Oats,Carrots
+,Rampur Greyhound,Soya Chunks Pulao with Cucumber,Raw,Soya Chunks,Cucumber,Bitter Gourd,Bajra,,
+,Indian Spitz,Carrots Chunks with Green Beans,Raw,Carrots,Green Beans,Ragi,Soya Chunks,Fenugreek Seeds,Cucumber
+,Himalayan Cat,Bajra Mash with Coconut Oil,Baked,Bajra,Coconut Oil,Chicken,Ridge Gourd,Bitter Gourd,Papaya
+,Indian Pariah Dog,Paneer Chunks with Spinach,Stir-fried,Paneer,Spinach,Ragi,,,
+,Rampur Greyhound,Wheat Chunks with Bottle Gourd,Slow-cooked,Wheat,Bottle Gourd,Curd,Okra,Paneer,Pomegranate
+,Mudhol Hound,Soya Chunks Stew with Sweet Potato,Raw,Soya Chunks,Sweet Potato,Ridge Gourd,,,
+,Kanni,Cucumber Paratha with Green Beans,Raw,Cucumber,Green Beans,Oats,Lamb,,
+,Rampur Greyhound,Rice Chunks with Bitter Gourd,Slow-cooked,Rice,Bitter Gourd,Lentils,Pomegranate,,
+,Kaikadi,Ragi Mash with Lamb,Boiled,Ragi,Lamb,Bottle Gourd,,,
+,Mudhol Hound,Soya Chunks Khichdi with Spinach,Baked,Soya Chunks,Spinach,Mango,Bajra,,
+,Himalayan Cat,Bajra Pulao with Papaya,Pressure-cooked,Bajra,Papaya,Goat,Ridge Gourd,,
+,Tibetan Mastiff,Pumpkin Khichdi with Carrots,Pressure-cooked,Pumpkin,Carrots,Banana,Paneer,,
+,Bangkaew,Spinach Paratha with Lentils,Boiled,Spinach,Lentils,Oats,,,
+,Chippiparai,Jowar Stew with Ridge Gourd,Boiled,Jowar,Ridge Gourd,Papaya,Lamb,,
+,Bakharwal Dog,Bottle Gourd Chunks with Goat,Raw,Bottle Gourd,Goat,Pumpkin,Coconut Oil,Cucumber,
+,Mudhol Hound,Mango Mash with Ridge Gourd,Slow-cooked,Mango,Ridge Gourd,Curd,Eggs,Pumpkin,Ridge Gourd
+,Indian Spitz,Okra Mash with Bottle Gourd,Pressure-cooked,Okra,Bottle Gourd,Sweet Potato,Apple,Coconut Oil,Goat
+,Bakharwal Dog,Ghee Chunks with Eggs,Pressure-cooked,Ghee,Eggs,Green Beans,Ragi,Watermelon,
+,Indian Spitz,Banana Pulao with Okra,Stir-fried,Banana,Okra,Oats,Chicken,,
+,Indian Pariah Dog,Eggs Stew with Ridge Gourd,Boiled,Eggs,Ridge Gourd,Oats,Curd,Pomegranate,
+,Indian Bicolor Cat,Peas Stew with Bajra,Stir-fried,Peas,Bajra,Cucumber,Goat,,
+,Chippiparai,Fish Chunks with Spinach,Baked,Fish,Spinach,Ghee,Pumpkin,Banana,
+,Chippiparai,Bottle Gourd Khichdi with Fish,Stir-fried,Bottle Gourd,Fish,Spinach,Watermelon,Jowar,Ghee
+,Rampur Greyhound,Spinach Chunks with Apple,Slow-cooked,Spinach,Apple,Bajra,Paneer,,
+,Bakharwal Dog,Eggs Mash with Mango,Steamed,Eggs,Mango,Turmeric,Sweet Potato,Carrots,
+,Rampur Greyhound,Lentils Mash with Bajra,Stir-fried,Lentils,Bajra,Bottle Gourd,Pomegranate,,
+,Chippiparai,Bottle Gourd Khichdi with Sweet Potato,Boiled,Bottle Gourd,Sweet Potato,Fish,,,
+,Indian Pariah Dog,Bajra Mash with Coconut Oil,Baked,Bajra,Coconut Oil,Carrots,Cucumber,Eggs,
+,Indian Pariah Dog,Bottle Gourd Stew with Ridge Gourd,Boiled,Bottle Gourd,Ridge Gourd,Turmeric,Ragi,Lentils,Cucumber
+,Mudhol Hound,Bitter Gourd Pulao with Eggs,Raw,Bitter Gourd,Eggs,Coconut Oil,Okra,Oats,Watermelon
+,Rajapalayam,Ghee Paratha with Carrots,Steamed,Ghee,Carrots,Pumpkin,Watermelon,Fish,
+,Tangkhul Hui,Peas Khichdi with Watermelon,Slow-cooked,Peas,Watermelon,Chicken,Bajra,,
+,Pandikona,Soya Chunks Pulao with Rice,Pressure-cooked,Soya Chunks,Rice,Ghee,Pomegranate,Bitter Gourd,
+,Himalayan Cat,Turmeric Stew with Okra,Slow-cooked,Turmeric,Okra,Mango,Fish,Ragi,
+,Rampur Greyhound,Pumpkin Pulao with Fish,Pressure-cooked,Pumpkin,Fish,Bottle Gourd,,,
+,Pandikona,Carrots Stew with Goat,Steamed,Carrots,Goat,Wheat,,,
+,Bully Kutta,Oats Stew with Okra,Baked,Oats,Okra,Fish,Watermelon,,
+,Indian Spitz,Apple Chunks with Fenugreek Seeds,Baked,Apple,Fenugreek Seeds,Rice,Okra,Goat,
+,Tibetan Mastiff,Ridge Gourd Chunks with Pumpkin,Raw,Ridge Gourd,Pumpkin,Fish,,,
+,Tibetan Mastiff,Spinach Paratha with Papaya,Raw,Spinach,Papaya,Ghee,Soya Chunks,Jowar,
+,Kombai,Ridge Gourd Curry with Watermelon,Baked,Ridge Gourd,Watermelon,Sweet Potato,Curd,Soya Chunks,Bottle Gourd
+,Rampur Greyhound,Green Beans Curry with Chicken,Stir-fried,Green Beans,Chicken,Sweet Potato,,,
+,Bakharwal Dog,Bottle Gourd Curry with Fish,Stir-fried,Bottle Gourd,Fish,Pumpkin,,,
+,Pandikona,Jowar Chunks with Peas,Raw,Jowar,Peas,Papaya,Fish,,
+,Mudhol Hound,Okra Pulao with Bajra,Raw,Okra,Bajra,Pomegranate,Eggs,,
+,Indian Bicolor Cat,Lamb Khichdi with Rice,Raw,Lamb,Rice,Bitter Gourd,,,
+,Kombai,Pomegranate Mash with Okra,Raw,Pomegranate,Okra,Green Beans,Coconut Oil,Soya Chunks,Ragi
+,Pandikona,Paneer Chunks with Pomegranate,Boiled,Paneer,Pomegranate,Oats,Ridge Gourd,,
+,Himalayan Cat,Bitter Gourd Khichdi with Fish,Slow-cooked,Bitter Gourd,Fish,Oats,,,
+,Kaikadi,Soya Chunks Pulao with Carrots,Stir-fried,Soya Chunks,Carrots,Coconut Oil,Pumpkin,Banana,Peas
+,Kanni,Eggs Chunks with Watermelon,Baked,Eggs,Watermelon,Green Beans,Ragi,,
+,Kombai,Banana Mash with Bottle Gourd,Steamed,Banana,Bottle Gourd,Chicken,Rice,Fenugreek Seeds,
+,Vikhan Sheepdog,Sweet Potato Paratha with Mango,Steamed,Sweet Potato,Mango,Bottle Gourd,Paneer,,
+,Himalayan Cat,Wheat Curry with Apple,Raw,Wheat,Apple,Okra,Turmeric,Lamb,
+,Himalayan Cat,Lentils Stew with Sweet Potato,Raw,Lentils,Sweet Potato,Banana,Spinach,,
+,Himalayan Cat,Coconut Oil Paratha with Bajra,Pressure-cooked,Coconut Oil,Bajra,Apple,Soya Chunks,Carrots,
+,Rampur Greyhound,Bottle Gourd Pulao with Rice,Raw,Bottle Gourd,Rice,Paneer,Peas,Fenugreek Seeds,Pomegranate
+,Vikhan Sheepdog,Peas Pulao with Flaxseed,Steamed,Peas,Flaxseed,Oats,Chicken,Papaya,
+,Rampur Greyhound,Green Beans Stew with Spinach,Pressure-cooked,Green Beans,Spinach,Banana,Curd,Bajra,Goat
+,Kombai,Fish Pulao with Bajra,Baked,Fish,Bajra,Spinach,,,
+,Kanni,Okra Stew with Okra,Stir-fried,Okra,Okra,Curd,Fish,Watermelon,Jowar
+,Rampur Greyhound,Bottle Gourd Khichdi with Sweet Potato,Stir-fried,Bottle Gourd,Sweet Potato,Chicken,,,
+,Kombai,Pumpkin Khichdi with Bitter Gourd,Steamed,Pumpkin,Bitter Gourd,Chicken,Mango,,
+,Vikhan Sheepdog,Bottle Gourd Mash with Eggs,Slow-cooked,Bottle Gourd,Eggs,Ragi,Mango,,
+,Rampur Greyhound,Rice Curry with Goat,Stir-fried,Rice,Goat,Bottle Gourd,Flaxseed,Mango,
+,Bully Kutta,Pumpkin Stew with Bitter Gourd,Slow-cooked,Pumpkin,Bitter Gourd,Chicken,,,
+,Indian Pariah Dog,Banana Khichdi with Rice,Stir-fried,Banana,Rice,Goat,Okra,,
+,Jonangi,Carrots Khichdi with Ragi,Slow-cooked,Carrots,Ragi,Eggs,Apple,,
+,Jonangi,Wheat Khichdi with Bottle Gourd,Stir-fried,Wheat,Bottle Gourd,Cucumber,Eggs,,
+,Gaddi Kutta,Sweet Potato Stew with Ridge Gourd,Boiled,Sweet Potato,Ridge Gourd,Cucumber,Lamb,Coconut Oil,
+,Vikhan Sheepdog,Bajra Paratha with Ridge Gourd,Raw,Bajra,Ridge Gourd,Goat,Mango,,
+,Tangkhul Hui,Chicken Mash with Green Beans,Stir-fried,Chicken,Green Beans,Turmeric,Pomegranate,Pumpkin,
+,Kaikadi,Ragi Mash with Carrots,Raw,Ragi,Carrots,Eggs,,,
+,Indian Pariah Dog,Carrots Mash with Ghee,Raw,Carrots,Ghee,Lentils,Bajra,Pomegranate,Carrots
+,Indian Bicolor Cat,Fish Chunks with Peas,Steamed,Fish,Peas,Ghee,Oats,Mango,
+,Jonangi,Rice Curry with Goat,Baked,Rice,Goat,Mango,Bottle Gourd,,
+,Tibetan Mastiff,Eggs Paratha with Ghee,Steamed,Eggs,Ghee,Carrots,Papaya,Wheat,
+,Rajapalayam,Chicken Pulao with Rice,Pressure-cooked,Chicken,Rice,Banana,Spinach,,
+,Bakharwal Dog,Sweet Potato Pulao with Ridge Gourd,Baked,Sweet Potato,Ridge Gourd,Soya Chunks,,,
+,Bakharwal Dog,Goat Curry with Oats,Steamed,Goat,Oats,Ridge Gourd,,,
+,Bakharwal Dog,Ragi Pulao with Soya Chunks,Steamed,Ragi,Soya Chunks,Okra,Pomegranate,Flaxseed,
+,Tibetan Mastiff,Okra Khichdi with Bajra,Raw,Okra,Bajra,Pomegranate,Flaxseed,Spinach,Lentils
+,Pandikona,Soya Chunks Stew with Spinach,Pressure-cooked,Soya Chunks,Spinach,Jowar,,,
+,Rampur Greyhound,Banana Stew with Spinach,Slow-cooked,Banana,Spinach,Lentils,Spinach,Coconut Oil,Oats
+,Rampur Greyhound,Rice Stew with Flaxseed,Pressure-cooked,Rice,Flaxseed,Apple,Fish,Carrots,
+,Kaikadi,Peas Pulao with Soya Chunks,Pressure-cooked,Peas,Soya Chunks,Sweet Potato,Mango,,
+,Bangkaew,Carrots Chunks with Ragi,Pressure-cooked,Carrots,Ragi,Lentils,Carrots,Fenugreek Seeds,Watermelon
+,Bully Kutta,Okra Chunks with Wheat,Steamed,Okra,Wheat,Fenugreek Seeds,Eggs,Pomegranate,
+,Kombai,Lentils Chunks with Ridge Gourd,Slow-cooked,Lentils,Ridge Gourd,Sweet Potato,,,
+,Kaikadi,Apple Stew with Peas,Steamed,Apple,Peas,Paneer,Wheat,,
+,Pandikona,Oats Curry with Carrots,Slow-cooked,Oats,Carrots,Eggs,,,
+,Mudhol Hound,Soya Chunks Pulao with Rice,Stir-fried,Soya Chunks,Rice,Spinach,,,
+,Tibetan Mastiff,Okra Pulao with Chicken,Raw,Okra,Chicken,Oats,Papaya,Coconut Oil,
+,Chippiparai,Turmeric Stew with Green Beans,Baked,Turmeric,Green Beans,Papaya,Pumpkin,Eggs,
+,Bully Kutta,Peas Pulao with Pumpkin,Slow-cooked,Peas,Pumpkin,Coconut Oil,Watermelon,Goat,Okra
+,Bully Kutta,Ridge Gourd Chunks with Fish,Boiled,Ridge Gourd,Fish,Rice,Apple,Ghee,Peas
+,Pandikona,Papaya Pulao with Lentils,Pressure-cooked,Papaya,Lentils,Bottle Gourd,Sweet Potato,,
+,Gaddi Kutta,Apple Paratha with Bajra,Raw,Apple,Bajra,Carrots,Paneer,,
+,Jonangi,Soya Chunks Pulao with Green Beans,Stir-fried,Soya Chunks,Green Beans,Ragi,Banana,,
+,Bakharwal Dog,Peas Paratha with Papaya,Raw,Peas,Papaya,Lamb,Rice,,
+,Bakharwal Dog,Paneer Stew with Ridge Gourd,Raw,Paneer,Ridge Gourd,Ghee,Peas,Wheat,Papaya
+,Bangkaew,Cucumber Chunks with Sweet Potato,Stir-fried,Cucumber,Sweet Potato,Goat,Green Beans,,
+,Rajapalayam,Oats Curry with Curd,Raw,Oats,Curd,Soya Chunks,Watermelon,Bottle Gourd,
+,Tibetan Mastiff,Pumpkin Stew with Spinach,Baked,Pumpkin,Spinach,Coconut Oil,Goat,Ridge Gourd,Mango
+,Kombai,Bajra Chunks with Eggs,Pressure-cooked,Bajra,Eggs,Flaxseed,Papaya,Green Beans,
+,Bangkaew,Lamb Pulao with Ridge Gourd,Slow-cooked,Lamb,Ridge Gourd,Curd,Bajra,Pomegranate,
+,Himalayan Cat,Turmeric Khichdi with Ridge Gourd,Boiled,Turmeric,Ridge Gourd,Rice,Cucumber,Carrots,Fish
+,Rampur Greyhound,Bajra Khichdi with Turmeric,Baked,Bajra,Turmeric,Bitter Gourd,Papaya,Fish,
+,Chippiparai,Eggs Curry with Papaya,Slow-cooked,Eggs,Papaya,Sweet Potato,Ridge Gourd,,
+,Bully Kutta,Bottle Gourd Pulao with Sweet Potato,Stir-fried,Bottle Gourd,Sweet Potato,Ghee,Banana,Chicken,
+,Gaddi Kutta,Green Beans Khichdi with Soya Chunks,Baked,Green Beans,Soya Chunks,Cucumber,Flaxseed,Carrots,Rice
+,Bakharwal Dog,Lentils Pulao with Okra,Baked,Lentils,Okra,Curd,Banana,Jowar,Bottle Gourd
+,Mudhol Hound,Wheat Stew with Banana,Raw,Wheat,Banana,Goat,Carrots,Coconut Oil,
+,Tangkhul Hui,Pumpkin Mash with Banana,Pressure-cooked,Pumpkin,Banana,Spinach,Eggs,Curd,
+,Bully Kutta,Spinach Mash with Fenugreek Seeds,Raw,Spinach,Fenugreek Seeds,Ridge Gourd,Jowar,Apple,Goat
+,Indian Pariah Dog,Ridge Gourd Curry with Fish,Pressure-cooked,Ridge Gourd,Fish,Ghee,Jowar,Papaya,Peas
+,Jonangi,Spinach Curry with Lamb,Raw,Spinach,Lamb,Jowar,,,
+,Rajapalayam,Sweet Potato Curry with Bitter Gourd,Steamed,Sweet Potato,Bitter Gourd,Eggs,Apple,Coconut Oil,Okra
+,Kanni,Oats Chunks with Ghee,Steamed,Oats,Ghee,Lentils,Spinach,Apple,
+,Kombai,Peas Pulao with Lamb,Slow-cooked,Peas,Lamb,Ragi,,,
+,Gaddi Kutta,Papaya Mash with Spinach,Stir-fried,Papaya,Spinach,Goat,Sweet Potato,,
+,Indian Bicolor Cat,Eggs Pulao with Spinach,Baked,Eggs,Spinach,Pumpkin,,,
+,Indian Spitz,Okra Chunks with Apple,Pressure-cooked,Okra,Apple,Eggs,Rice,Ghee,
+,Himalayan Cat,Carrots Khichdi with Lamb,Boiled,Carrots,Lamb,Rice,,,
+,Kanni,Carrots Khichdi with Mango,Baked,Carrots,Mango,Ghee,Goat,Peas,Oats
+,Gaddi Kutta,Goat Mash with Bitter Gourd,Boiled,Goat,Bitter Gourd,Sweet Potato,,,
+,Indian Spitz,Apple Chunks with Okra,Baked,Apple,Okra,Wheat,Goat,,
+,Himalayan Cat,Mango Mash with Eggs,Steamed,Mango,Eggs,Carrots,Jowar,,
+,Indian Spitz,Curd Curry with Jowar,Steamed,Curd,Jowar,Papaya,Green Beans,Lamb,
+,Tibetan Mastiff,Chicken Pulao with Flaxseed,Slow-cooked,Chicken,Flaxseed,Rice,Carrots,Papaya,Bitter Gourd
+,Rajapalayam,Jowar Pulao with Flaxseed,Baked,Jowar,Flaxseed,Carrots,Mango,Carrots,Chicken
+,Indian Pariah Dog,Chicken Khichdi with Pomegranate,Slow-cooked,Chicken,Pomegranate,Bajra,Bitter Gourd,Coconut Oil,
+,Gaddi Kutta,Papaya Mash with Ghee,Pressure-cooked,Papaya,Ghee,Ridge Gourd,Fish,Okra,Oats
+,Bangkaew,Papaya Curry with Wheat,Steamed,Papaya,Wheat,Paneer,Green Beans,,
+,Himalayan Cat,Papaya Paratha with Ridge Gourd,Raw,Papaya,Ridge Gourd,Fish,Peas,Rice,Fenugreek Seeds
+,Pandikona,Bitter Gourd Stew with Lentils,Stir-fried,Bitter Gourd,Lentils,Bajra,,,
+,Kaikadi,Peas Pulao with Watermelon,Pressure-cooked,Peas,Watermelon,Ragi,Flaxseed,Bottle Gourd,Soya Chunks
+,Indian Pariah Dog,Green Beans Pulao with Curd,Baked,Green Beans,Curd,Bajra,Soya Chunks,Watermelon,
+,Gaddi Kutta,Turmeric Pulao with Rice,Stir-fried,Turmeric,Rice,Spinach,Watermelon,Green Beans,Lamb
+,Tangkhul Hui,Curd Pulao with Watermelon,Pressure-cooked,Curd,Watermelon,Chicken,Ragi,Ridge Gourd,Spinach
+,Indian Bicolor Cat,Chicken Chunks with Spinach,Stir-fried,Chicken,Spinach,Curd,Cucumber,Bottle Gourd,Jowar
+,Jonangi,Sweet Potato Khichdi with Okra,Slow-cooked,Sweet Potato,Okra,Papaya,Fish,,
+,Rampur Greyhound,Soya Chunks Stew with Curd,Pressure-cooked,Soya Chunks,Curd,Papaya,Bajra,Carrots,Bottle Gourd
+,Rajapalayam,Carrots Stew with Bottle Gourd,Slow-cooked,Carrots,Bottle Gourd,Ragi,Paneer,Flaxseed,Apple
+,Jonangi,Carrots Khichdi with Fish,Stir-fried,Carrots,Fish,Ragi,Papaya,,
+,Tangkhul Hui,Fish Khichdi with Watermelon,Slow-cooked,Fish,Watermelon,Turmeric,Jowar,Bitter Gourd,
+,Indian Pariah Dog,Eggs Curry with Watermelon,Steamed,Eggs,Watermelon,Turmeric,Bajra,Bitter Gourd,
+,Pandikona,Bitter Gourd Paratha with Okra,Stir-fried,Bitter Gourd,Okra,Ragi,Pomegranate,Goat,Ghee
+,Gaddi Kutta,Lentils Mash with Peas,Pressure-cooked,Lentils,Peas,Wheat,,,
+,Chippiparai,Ragi Pulao with Carrots,Steamed,Ragi,Carrots,Apple,Soya Chunks,,
+,Tangkhul Hui,Fish Curry with Bajra,Baked,Fish,Bajra,Pomegranate,Peas,Turmeric,Okra
+,Rajapalayam,Lentils Khichdi with Ragi,Steamed,Lentils,Ragi,Ridge Gourd,,,
+,Chippiparai,Okra Chunks with Pumpkin,Raw,Okra,Pumpkin,Apple,Fish,Flaxseed,
+,Indian Bicolor Cat,Flaxseed Paratha with Bajra,Raw,Flaxseed,Bajra,Mango,Spinach,Spinach,Chicken
+,Bangkaew,Paneer Pulao with Peas,Raw,Paneer,Peas,Pumpkin,,,
+,Pandikona,Bajra Chunks with Ghee,Steamed,Bajra,Ghee,Fish,Bottle Gourd,Papaya,
+,Rajapalayam,Bajra Pulao with Spinach,Steamed,Bajra,Spinach,Lentils,,,
+,Jonangi,Coconut Oil Chunks with Pomegranate,Raw,Coconut Oil,Pomegranate,Wheat,Lamb,Okra,
+,Bangkaew,Cucumber Mash with Green Beans,Baked,Cucumber,Green Beans,Rice,Coconut Oil,Eggs,Bottle Gourd
+,Chippiparai,Goat Khichdi with Carrots,Pressure-cooked,Goat,Carrots,Wheat,Pomegranate,Coconut Oil,
+,Jonangi,Soya Chunks Curry with Rice,Pressure-cooked,Soya Chunks,Rice,Apple,Bitter Gourd,,
+,Chippiparai,Pomegranate Paratha with Green Beans,Steamed,Pomegranate,Green Beans,Rice,Chicken,Ghee,Carrots
+,Mudhol Hound,Coconut Oil Khichdi with Bottle Gourd,Boiled,Coconut Oil,Bottle Gourd,Banana,Lentils,Wheat,Okra
+,Kanni,Bitter Gourd Khichdi with Eggs,Steamed,Bitter Gourd,Eggs,Pomegranate,Pumpkin,,
+,Himalayan Cat,Ragi Paratha with Soya Chunks,Slow-cooked,Ragi,Soya Chunks,Carrots,,,
+,Rajapalayam,Paneer Curry with Bottle Gourd,Boiled,Paneer,Bottle Gourd,Ridge Gourd,Bajra,Cucumber,Flaxseed
+,Indian Spitz,Ridge Gourd Stew with Wheat,Raw,Ridge Gourd,Wheat,Lamb,,,
+,Jonangi,Jowar Curry with Fish,Raw,Jowar,Fish,Pomegranate,Peas,,
+,Bakharwal Dog,Paneer Khichdi with Okra,Slow-cooked,Paneer,Okra,Oats,Papaya,,
+,Kaikadi,Okra Paratha with Eggs,Slow-cooked,Okra,Eggs,Turmeric,Carrots,Mango,Oats
+,Bakharwal Dog,Carrots Chunks with Banana,Slow-cooked,Carrots,Banana,Rice,Paneer,Spinach,Ghee
+,Indian Pariah Dog,Sweet Potato Khichdi with Goat,Pressure-cooked,Sweet Potato,Goat,Spinach,,,
+,Rajapalayam,Fenugreek Seeds Stew with Apple,Baked,Fenugreek Seeds,Apple,Carrots,Pumpkin,Lentils,
+,Indian Spitz,Fenugreek Seeds Chunks with Ridge Gourd,Boiled,Fenugreek Seeds,Ridge Gourd,Bottle Gourd,Bajra,Pomegranate,Soya Chunks
+,Rampur Greyhound,Spinach Pulao with Pumpkin,Pressure-cooked,Spinach,Pumpkin,Fish,Cucumber,,
+,Mudhol Hound,Okra Chunks with Bajra,Pressure-cooked,Okra,Bajra,Soya Chunks,,,
+,Vikhan Sheepdog,Curd Chunks with Okra,Raw,Curd,Okra,Cucumber,Soya Chunks,Wheat,
+,Bully Kutta,Goat Stew with Bajra,Baked,Goat,Bajra,Fenugreek Seeds,Mango,Green Beans,Green Beans
+,Bully Kutta,Sweet Potato Khichdi with Paneer,Baked,Sweet Potato,Paneer,Ridge Gourd,Mango,Fenugreek Seeds,
+,Vikhan Sheepdog,Spinach Pulao with Mango,Slow-cooked,Spinach,Mango,Chicken,Pumpkin,,
+,Kaikadi,Jowar Chunks with Chicken,Slow-cooked,Jowar,Chicken,Spinach,,,
+,Vikhan Sheepdog,Ridge Gourd Chunks with Pumpkin,Pressure-cooked,Ridge Gourd,Pumpkin,Papaya,Lentils,,
+,Bakharwal Dog,Wheat Curry with Bitter Gourd,Stir-fried,Wheat,Bitter Gourd,Watermelon,Paneer,Bottle Gourd,Ghee
+,Gaddi Kutta,Bottle Gourd Chunks with Fish,Raw,Bottle Gourd,Fish,Oats,,,
+,Tangkhul Hui,Okra Khichdi with Rice,Stir-fried,Okra,Rice,Goat,,,
+,Kombai,Pumpkin Paratha with Eggs,Pressure-cooked,Pumpkin,Eggs,Spinach,,,
+,Kaikadi,Peas Chunks with Eggs,Pressure-cooked,Peas,Eggs,Banana,Rice,,
+,Mudhol Hound,Bitter Gourd Mash with Watermelon,Stir-fried,Bitter Gourd,Watermelon,Eggs,Oats,,
+,Gaddi Kutta,Oats Mash with Fenugreek Seeds,Baked,Oats,Fenugreek Seeds,Green Beans,Soya Chunks,Green Beans,Papaya
+,Gaddi Kutta,Ridge Gourd Mash with Apple,Raw,Ridge Gourd,Apple,Curd,Paneer,Pumpkin,
+,Indian Spitz,Paneer Khichdi with Wheat,Stir-fried,Paneer,Wheat,Cucumber,Ridge Gourd,,
+,Bully Kutta,Green Beans Chunks with Banana,Steamed,Green Beans,Banana,Fish,Wheat,Green Beans,Coconut Oil
+,Kaikadi,Pumpkin Curry with Bottle Gourd,Steamed,Pumpkin,Bottle Gourd,Soya Chunks,,,
+,Bakharwal Dog,Turmeric Paratha with Pomegranate,Steamed,Turmeric,Pomegranate,Ridge Gourd,Pumpkin,Eggs,
+,Rajapalayam,Goat Chunks with Pumpkin,Slow-cooked,Goat,Pumpkin,Spinach,,,
+,Chippiparai,Bitter Gourd Mash with Ridge Gourd,Steamed,Bitter Gourd,Ridge Gourd,Ghee,Chicken,Jowar,Apple
+,Kanni,Sweet Potato Curry with Turmeric,Slow-cooked,Sweet Potato,Turmeric,Bottle Gourd,Watermelon,Spinach,Eggs
+,Bangkaew,Goat Mash with Ridge Gourd,Boiled,Goat,Ridge Gourd,Flaxseed,Bajra,Ridge Gourd,Mango
+,Bakharwal Dog,Peas Pulao with Apple,Steamed,Peas,Apple,Soya Chunks,Rice,,
+,Mudhol Hound,Paneer Paratha with Ragi,Baked,Paneer,Ragi,Green Beans,,,
+,Kombai,Curd Stew with Soya Chunks,Pressure-cooked,Curd,Soya Chunks,Watermelon,Ridge Gourd,Ragi,
+,Indian Bicolor Cat,Bitter Gourd Khichdi with Pomegranate,Boiled,Bitter Gourd,Pomegranate,Soya Chunks,Oats,,
+,Kaikadi,Chicken Khichdi with Ragi,Pressure-cooked,Chicken,Ragi,Green Beans,Ghee,Watermelon,
+,Tangkhul Hui,Lamb Khichdi with Okra,Baked,Lamb,Okra,Green Beans,Ghee,Pumpkin,Apple
+,Bully Kutta,Ghee Stew with Papaya,Boiled,Ghee,Papaya,Paneer,Okra,Jowar,
+,Bully Kutta,Soya Chunks Stew with Jowar,Stir-fried,Soya Chunks,Jowar,Peas,,,
+,Vikhan Sheepdog,Rice Khichdi with Cucumber,Steamed,Rice,Cucumber,Fish,Bitter Gourd,,
+,Indian Bicolor Cat,Fish Mash with Ridge Gourd,Raw,Fish,Ridge Gourd,Jowar,,,
+,Indian Bicolor Cat,Apple Chunks with Paneer,Boiled,Apple,Paneer,Bitter Gourd,Jowar,Green Beans,Curd
+,Kanni,Green Beans Pulao with Wheat,Raw,Green Beans,Wheat,Lamb,,,
+,Bully Kutta,Goat Mash with Jowar,Stir-fried,Goat,Jowar,Green Beans,Cucumber,Coconut Oil,
+,Kaikadi,Coconut Oil Khichdi with Rice,Baked,Coconut Oil,Rice,Lentils,Bottle Gourd,Banana,Peas
+,Mudhol Hound,Lamb Pulao with Coconut Oil,Slow-cooked,Lamb,Coconut Oil,Pomegranate,Pumpkin,Spinach,
+,Chippiparai,Bajra Pulao with Papaya,Baked,Bajra,Papaya,Ghee,Goat,Ridge Gourd,
+,Kaikadi,Lentils Pulao with Ridge Gourd,Slow-cooked,Lentils,Ridge Gourd,Jowar,Banana,,
+,Bully Kutta,Soya Chunks Pulao with Spinach,Steamed,Soya Chunks,Spinach,Pumpkin,,,
+,Jonangi,Sweet Potato Stew with Coconut Oil,Boiled,Sweet Potato,Coconut Oil,Peas,Peas,Lentils,Banana
+,Kanni,Peas Khichdi with Fish,Steamed,Peas,Fish,Green Beans,Watermelon,Rice,Flaxseed
+,Indian Spitz,Pumpkin Paratha with Lamb,Stir-fried,Pumpkin,Lamb,Ridge Gourd,Watermelon,,
+,Chippiparai,Carrots Chunks with Rice,Slow-cooked,Carrots,Rice,Paneer,,,
+,Pandikona,Curd Pulao with Watermelon,Baked,Curd,Watermelon,Ridge Gourd,Wheat,Soya Chunks,Okra
+,Himalayan Cat,Ragi Khichdi with Eggs,Stir-fried,Ragi,Eggs,Flaxseed,Papaya,Spinach,Green Beans
+,Indian Pariah Dog,Soya Chunks Stew with Green Beans,Boiled,Soya Chunks,Green Beans,Ragi,Papaya,,
+,Bully Kutta,Okra Paratha with Jowar,Slow-cooked,Okra,Jowar,Papaya,Soya Chunks,,
+,Indian Pariah Dog,Lamb Chunks with Wheat,Steamed,Lamb,Wheat,Bottle Gourd,,,
+,Bakharwal Dog,Mango Pulao with Goat,Steamed,Mango,Goat,Pumpkin,Bitter Gourd,,
+,Himalayan Cat,Ridge Gourd Paratha with Fish,Baked,Ridge Gourd,Fish,Rice,Coconut Oil,Pomegranate,
+,Himalayan Cat,Oats Khichdi with Chicken,Raw,Oats,Chicken,Pomegranate,Okra,,
+,Indian Pariah Dog,Sweet Potato Pulao with Bottle Gourd,Raw,Sweet Potato,Bottle Gourd,Chicken,,,
+,Tangkhul Hui,Pumpkin Khichdi with Peas,Slow-cooked,Pumpkin,Peas,Soya Chunks,,,
+,Bully Kutta,Papaya Paratha with Ghee,Steamed,Papaya,Ghee,Fish,Peas,Jowar,
+,Kaikadi,Lentils Curry with Okra,Boiled,Lentils,Okra,Jowar,Fenugreek Seeds,Pomegranate,Okra
+,Jonangi,Wheat Khichdi with Soya Chunks,Steamed,Wheat,Soya Chunks,Spinach,,,
+,Bangkaew,Green Beans Khichdi with Lentils,Slow-cooked,Green Beans,Lentils,Ragi,Turmeric,Pomegranate,
+,Rajapalayam,Pomegranate Mash with Soya Chunks,Baked,Pomegranate,Soya Chunks,Bajra,Green Beans,,
+,Mudhol Hound,Peas Mash with Lamb,Baked,Peas,Lamb,Bajra,,,
+,Kanni,Lamb Khichdi with Wheat,Stir-fried,Lamb,Wheat,Okra,,,
+,Bangkaew,Rice Chunks with Papaya,Baked,Rice,Papaya,Bottle Gourd,Okra,Curd,Eggs
+,Chippiparai,Bitter Gourd Stew with Paneer,Stir-fried,Bitter Gourd,Paneer,Rice,,,
+,Kombai,Bitter Gourd Chunks with Fish,Slow-cooked,Bitter Gourd,Fish,Fenugreek Seeds,Carrots,Sweet Potato,Cucumber
+,Rampur Greyhound,Eggs Khichdi with Rice,Steamed,Eggs,Rice,Spinach,Banana,,
+,Bully Kutta,Coconut Oil Stew with Spinach,Boiled,Coconut Oil,Spinach,Lentils,Carrots,Watermelon,Bajra
+,Mudhol Hound,Jowar Curry with Goat,Pressure-cooked,Jowar,Goat,Flaxseed,Apple,Ridge Gourd,Bitter Gourd
+,Himalayan Cat,Pumpkin Stew with Cucumber,Baked,Pumpkin,Cucumber,Spinach,Paneer,,
+,Indian Spitz,Bajra Khichdi with Bottle Gourd,Slow-cooked,Bajra,Bottle Gourd,Lamb,,,
+,Kanni,Peas Khichdi with Cucumber,Boiled,Peas,Cucumber,Bajra,Goat,,
+,Bully Kutta,Bottle Gourd Paratha with Flaxseed,Pressure-cooked,Bottle Gourd,Flaxseed,Chicken,Ragi,Cucumber,
+,Indian Bicolor Cat,Rice Pulao with Watermelon,Steamed,Rice,Watermelon,Ridge Gourd,Lamb,Fenugreek Seeds,
+,Vikhan Sheepdog,Fish Mash with Sweet Potato,Slow-cooked,Fish,Sweet Potato,Spinach,,,
+,Rampur Greyhound,Spinach Curry with Lamb,Pressure-cooked,Spinach,Lamb,Wheat,,,
+,Indian Pariah Dog,Banana Khichdi with Turmeric,Stir-fried,Banana,Turmeric,Ragi,Carrots,Eggs,
+,Gaddi Kutta,Ghee Pulao with Apple,Pressure-cooked,Ghee,Apple,Chicken,Okra,Oats,
+,Himalayan Cat,Banana Paratha with Peas,Raw,Banana,Peas,Turmeric,Paneer,Pumpkin,
+,Kaikadi,Papaya Pulao with Jowar,Steamed,Papaya,Jowar,Okra,Spinach,Fenugreek Seeds,Fish
+,Vikhan Sheepdog,Fenugreek Seeds Khichdi with Goat,Pressure-cooked,Fenugreek Seeds,Goat,Peas,Rice,Cucumber,Spinach
+,Tangkhul Hui,Soya Chunks Pulao with Cucumber,Baked,Soya Chunks,Cucumber,Okra,Flaxseed,Rice,
+,Kaikadi,Mango Pulao with Eggs,Boiled,Mango,Eggs,Peas,Jowar,,
+,Bakharwal Dog,Chicken Chunks with Peas,Baked,Chicken,Peas,Oats,,,
+,Jonangi,Bajra Chunks with Ridge Gourd,Baked,Bajra,Ridge Gourd,Pomegranate,Chicken,,
+,Jonangi,Lentils Mash with Rice,Raw,Lentils,Rice,Bitter Gourd,,,
+,Rampur Greyhound,Papaya Mash with Oats,Boiled,Papaya,Oats,Carrots,Fenugreek Seeds,Soya Chunks,Green Beans
+,Indian Pariah Dog,Pumpkin Chunks with Carrots,Raw,Pumpkin,Carrots,Fish,,,
+,Vikhan Sheepdog,Ragi Mash with Papaya,Pressure-cooked,Ragi,Papaya,Chicken,Ridge Gourd,,
+,Jonangi,Spinach Mash with Soya Chunks,Stir-fried,Spinach,Soya Chunks,Cucumber,Ghee,Bajra,
+,Indian Spitz,Bitter Gourd Pulao with Pumpkin,Stir-fried,Bitter Gourd,Pumpkin,Coconut Oil,Paneer,Bitter Gourd,Watermelon
+,Gaddi Kutta,Bitter Gourd Pulao with Oats,Pressure-cooked,Bitter Gourd,Oats,Soya Chunks,,,
+,Pandikona,Fenugreek Seeds Paratha with Bitter Gourd,Raw,Fenugreek Seeds,Bitter Gourd,Lentils,Oats,Cucumber,
+,Indian Spitz,Fenugreek Seeds Curry with Cucumber,Boiled,Fenugreek Seeds,Cucumber,Rice,Eggs,Ridge Gourd,
+,Jonangi,Mango Curry with Flaxseed,Pressure-cooked,Mango,Flaxseed,Spinach,Paneer,Wheat,
+,Himalayan Cat,Ridge Gourd Stew with Fenugreek Seeds,Steamed,Ridge Gourd,Fenugreek Seeds,Bottle Gourd,Paneer,Oats,Pomegranate
+,Vikhan Sheepdog,Bottle Gourd Stew with Ghee,Raw,Bottle Gourd,Ghee,Sweet Potato,Chicken,Pomegranate,
+,Mudhol Hound,Green Beans Stew with Oats,Slow-cooked,Green Beans,Oats,Eggs,,,
+,Bangkaew,Apple Stew with Coconut Oil,Stir-fried,Apple,Coconut Oil,Goat,Green Beans,Spinach,Pumpkin
+,Indian Spitz,Cucumber Stew with Ridge Gourd,Boiled,Cucumber,Ridge Gourd,Soya Chunks,Sweet Potato,,
+,Tibetan Mastiff,Chicken Khichdi with Bajra,Stir-fried,Chicken,Bajra,Ridge Gourd,,,
+,Gaddi Kutta,Bottle Gourd Curry with Fish,Pressure-cooked,Bottle Gourd,Fish,Apple,Oats,,
+,Rajapalayam,Lamb Paratha with Banana,Boiled,Lamb,Banana,Bajra,Bottle Gourd,,
+,Kaikadi,Chicken Pulao with Okra,Baked,Chicken,Okra,Wheat,,,
+,Tangkhul Hui,Fish Khichdi with Mango,Steamed,Fish,Mango,Bottle Gourd,Ragi,,
+,Indian Spitz,Spinach Khichdi with Banana,Stir-fried,Spinach,Banana,Wheat,Lamb,,
+,Bakharwal Dog,Bajra Khichdi with Cucumber,Baked,Bajra,Cucumber,Soya Chunks,Carrots,,
+,Pandikona,Carrots Chunks with Ragi,Boiled,Carrots,Ragi,Lamb,,,
+,Chippiparai,Pumpkin Paratha with Lentils,Raw,Pumpkin,Lentils,Pomegranate,Peas,,
+,Kombai,Bajra Curry with Green Beans,Baked,Bajra,Green Beans,Paneer,,,
+,Indian Bicolor Cat,Coconut Oil Paratha with Eggs,Boiled,Coconut Oil,Eggs,Pumpkin,Watermelon,Peas,Ridge Gourd
+,Kombai,Goat Curry with Pomegranate,Raw,Goat,Pomegranate,Green Beans,Pumpkin,,
+,Indian Spitz,Wheat Khichdi with Okra,Slow-cooked,Wheat,Okra,Chicken,Pomegranate,,
+,Indian Spitz,Turmeric Khichdi with Cucumber,Boiled,Turmeric,Cucumber,Chicken,Bottle Gourd,Sweet Potato,Carrots
+,Tibetan Mastiff,Fish Paratha with Cucumber,Pressure-cooked,Fish,Cucumber,Bottle Gourd,Pumpkin,,
+,Chippiparai,Pomegranate Curry with Pumpkin,Pressure-cooked,Pomegranate,Pumpkin,Fish,Carrots,Flaxseed,
+,Bakharwal Dog,Pomegranate Khichdi with Peas,Pressure-cooked,Pomegranate,Peas,Flaxseed,Sweet Potato,Paneer,
+,Bakharwal Dog,Lentils Chunks with Banana,Boiled,Lentils,Banana,Spinach,Carrots,Jowar,Coconut Oil
+,Vikhan Sheepdog,Lentils Mash with Peas,Pressure-cooked,Lentils,Peas,Bajra,Curd,Mango,
+,Jonangi,Flaxseed Chunks with Bitter Gourd,Slow-cooked,Flaxseed,Bitter Gourd,Cucumber,Ragi,Carrots,Chicken
+,Jonangi,Eggs Khichdi with Wheat,Baked,Eggs,Wheat,Carrots,,,
+,Gaddi Kutta,Fish Stew with Spinach,Steamed,Fish,Spinach,Bajra,,,
+,Kaikadi,Soya Chunks Paratha with Jowar,Boiled,Soya Chunks,Jowar,Peas,Mango,Coconut Oil,
+,Indian Bicolor Cat,Jowar Stew with Pomegranate,Stir-fried,Jowar,Pomegranate,Bitter Gourd,Fenugreek Seeds,Soya Chunks,
+,Tibetan Mastiff,Soya Chunks Mash with Ragi,Pressure-cooked,Soya Chunks,Ragi,Bottle Gourd,Bottle Gourd,Banana,Fenugreek Seeds
+,Rampur Greyhound,Fenugreek Seeds Mash with Bottle Gourd,Pressure-cooked,Fenugreek Seeds,Bottle Gourd,Lentils,Ragi,Cucumber,
+,Mudhol Hound,Pumpkin Pulao with Eggs,Slow-cooked,Pumpkin,Eggs,Peas,,,
+,Bully Kutta,Jowar Stew with Goat,Steamed,Jowar,Goat,Cucumber,Bottle Gourd,Turmeric,
+,Tibetan Mastiff,Carrots Chunks with Papaya,Stir-fried,Carrots,Papaya,Curd,Wheat,Goat,
+,Kanni,Soya Chunks Curry with Apple,Slow-cooked,Soya Chunks,Apple,Ridge Gourd,Ragi,,
+,Gaddi Kutta,Spinach Chunks with Mango,Steamed,Spinach,Mango,Wheat,Goat,,
+,Gaddi Kutta,Bottle Gourd Pulao with Oats,Baked,Bottle Gourd,Oats,Paneer,,,
+,Rajapalayam,Carrots Paratha with Papaya,Pressure-cooked,Carrots,Papaya,Fish,Peas,Oats,Ghee
+,Kaikadi,Chicken Pulao with Watermelon,Baked,Chicken,Watermelon,Bottle Gourd,Wheat,,
+,Himalayan Cat,Goat Chunks with Pomegranate,Pressure-cooked,Goat,Pomegranate,Peas,Jowar,Carrots,Curd
+,Kanni,Paneer Paratha with Bitter Gourd,Raw,Paneer,Bitter Gourd,Sweet Potato,,,
+,Jonangi,Bitter Gourd Pulao with Paneer,Raw,Bitter Gourd,Paneer,Banana,Fenugreek Seeds,Spinach,Bajra
+,Tangkhul Hui,Jowar Stew with Bitter Gourd,Slow-cooked,Jowar,Bitter Gourd,Eggs,,,
+,Vikhan Sheepdog,Bitter Gourd Pulao with Paneer,Baked,Bitter Gourd,Paneer,Pumpkin,,,
+,Indian Bicolor Cat,Lentils Chunks with Bottle Gourd,Baked,Lentils,Bottle Gourd,Ghee,Bajra,Peas,Watermelon
+,Tibetan Mastiff,Peas Stew with Papaya,Steamed,Peas,Papaya,Sweet Potato,Fish,,
+,Tangkhul Hui,Paneer Paratha with Green Beans,Raw,Paneer,Green Beans,Mango,Rice,,
+,Himalayan Cat,Turmeric Paratha with Okra,Baked,Turmeric,Okra,Chicken,Cucumber,Oats,
+,Tibetan Mastiff,Eggs Khichdi with Turmeric,Steamed,Eggs,Turmeric,Apple,Peas,Ridge Gourd,Wheat
+,Tangkhul Hui,Pumpkin Chunks with Green Beans,Stir-fried,Pumpkin,Green Beans,Goat,,,
+,Tangkhul Hui,Okra Curry with Fish,Stir-fried,Okra,Fish,Coconut Oil,Sweet Potato,Papaya,
+,Kaikadi,Bottle Gourd Khichdi with Goat,Stir-fried,Bottle Gourd,Goat,Jowar,,,
+,Kanni,Fish Curry with Papaya,Pressure-cooked,Fish,Papaya,Okra,Rice,,
+,Gaddi Kutta,Paneer Stew with Oats,Steamed,Paneer,Oats,Green Beans,Green Beans,Coconut Oil,Cucumber
+,Bangkaew,Peas Curry with Bottle Gourd,Boiled,Peas,Bottle Gourd,Cucumber,Curd,Lentils,Rice
+,Gaddi Kutta,Pomegranate Paratha with Bitter Gourd,Boiled,Pomegranate,Bitter Gourd,Bajra,Lentils,,
+,Bangkaew,Ghee Khichdi with Wheat,Stir-fried,Ghee,Wheat,Apple,Goat,Ridge Gourd,
+,Rajapalayam,Chicken Curry with Papaya,Slow-cooked,Chicken,Papaya,Curd,Pumpkin,Peas,
+,Bakharwal Dog,Cucumber Khichdi with Bajra,Steamed,Cucumber,Bajra,Chicken,Bottle Gourd,,
+,Jonangi,Carrots Pulao with Lentils,Raw,Carrots,Lentils,Pumpkin,Pomegranate,,
+,Rajapalayam,Ridge Gourd Paratha with Lamb,Boiled,Ridge Gourd,Lamb,Bajra,,,
+,Bangkaew,Watermelon Stew with Lentils,Pressure-cooked,Watermelon,Lentils,Coconut Oil,Sweet Potato,Spinach,
+,Bangkaew,Banana Mash with Rice,Pressure-cooked,Banana,Rice,Eggs,Carrots,,
+,Jonangi,Turmeric Stew with Oats,Baked,Turmeric,Oats,Banana,Eggs,Peas,
+,Kanni,Cucumber Chunks with Pumpkin,Steamed,Cucumber,Pumpkin,Spinach,Fish,,
+,Kaikadi,Peas Pulao with Lentils,Boiled,Peas,Lentils,Pumpkin,,,
+,Vikhan Sheepdog,Rice Paratha with Fish,Stir-fried,Rice,Fish,Ghee,Watermelon,Ridge Gourd,Bottle Gourd
+,Indian Pariah Dog,Ridge Gourd Curry with Rice,Raw,Ridge Gourd,Rice,Soya Chunks,,,
+,Indian Bicolor Cat,Paneer Chunks with Ghee,Steamed,Paneer,Ghee,Papaya,Bitter Gourd,Bajra,
+,Tangkhul Hui,Jowar Khichdi with Banana,Pressure-cooked,Jowar,Banana,Bottle Gourd,Lentils,,
+,Indian Pariah Dog,Bajra Khichdi with Okra,Boiled,Bajra,Okra,Lentils,,,
+,Tibetan Mastiff,Peas Stew with Sweet Potato,Raw,Peas,Sweet Potato,Chicken,Fenugreek Seeds,Carrots,Banana
+,Mudhol Hound,Green Beans Khichdi with Bitter Gourd,Steamed,Green Beans,Bitter Gourd,Wheat,Fenugreek Seeds,Fish,Pomegranate
+,Kaikadi,Soya Chunks Paratha with Spinach,Steamed,Soya Chunks,Spinach,Ragi,,,
+,Indian Bicolor Cat,Carrots Mash with Apple,Baked,Carrots,Apple,Turmeric,Eggs,Rice,Carrots
+,Rajapalayam,Papaya Pulao with Lamb,Steamed,Papaya,Lamb,Oats,Peas,,
+,Gaddi Kutta,Green Beans Stew with Eggs,Pressure-cooked,Green Beans,Eggs,Turmeric,Bajra,Watermelon,
+,Bakharwal Dog,Cucumber Paratha with Green Beans,Steamed,Cucumber,Green Beans,Bottle Gourd,Coconut Oil,Rice,Lentils
+,Indian Spitz,Carrots Pulao with Lamb,Steamed,Carrots,Lamb,Watermelon,Ghee,Sweet Potato,
+,Pandikona,Ghee Curry with Green Beans,Steamed,Ghee,Green Beans,Fish,Apple,Ragi,
+,Kaikadi,Green Beans Stew with Goat,Pressure-cooked,Green Beans,Goat,Pumpkin,,,

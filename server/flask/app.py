@@ -7,6 +7,7 @@ import joblib
 from reportanalysis.report_analyzer import analyze_reports
 import os
 import io
+from petfoodrecipe.pet_food_model import PetFoodModel  # Import the PetFoodModel class
 
 app = Flask(__name__)
 
@@ -26,6 +27,9 @@ vectorizer = TextVectorization(max_tokens=MAX_FEATURES,
                                output_sequence_length=2000,
                                output_mode='int')
 vectorizer.adapt(df['comment_text'].values)
+
+# Load the pet food prediction model
+pet_food_model = PetFoodModel.load_model('./petfoodrecipe/pet_food_model.joblib')
 
 @app.route('/')
 def home():
@@ -58,7 +62,6 @@ def predict_animal():
 
 @app.route('/check_comment_toxicity', methods=['POST'])
 def predict_toxicity():
-    
     data = request.json
     comment_text = data['text']
     
@@ -89,6 +92,25 @@ def analyze_medical_reports():
         results = analyze_reports(file_objects)
         
         return jsonify({'analysis': results})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/predict_pet_food', methods=['POST'])
+def predict_pet_food():
+    data = request.json
+    breed = data.get('breed')
+    ingredients = data.get('ingredients')
+
+    if not breed or not ingredients:
+        return jsonify({'error': 'Missing breed or ingredients'}), 400
+
+    try:
+        recipe, cooking_method = pet_food_model.predict(breed, ingredients)
+        return jsonify({
+            'recipe_name': recipe,
+            'cooking_method': cooking_method,
+            'note': 'This prediction is based on the closest match in our database.'
+        })
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
