@@ -29,6 +29,11 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
+//TEST ROUTE
+app.get('/test',(req,res)=>{
+  res.send("Hello world");
+})
+
 // Routes
 app.use('/api/users/', userRouter);
 app.use('/api/pets/', petRouter);
