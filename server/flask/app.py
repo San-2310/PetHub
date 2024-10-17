@@ -1,3 +1,6 @@
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'  # Disable oneDNN custom operations
+
 from flask import Flask, request, jsonify, render_template
 from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import TextVectorization
@@ -5,31 +8,51 @@ import numpy as np
 import pandas as pd
 import joblib
 from reportanalysis.report_analyzer import analyze_reports
-import os
 import io
-from petfoodrecipe.pet_food_model import PetFoodModel  # Import the PetFoodModel class
+from petfoodrecipe.pet_food_model import PetFoodModel
 
 app = Flask(__name__)
 
-# Load models and preprocessors for animal condition prediction
-animal_model = load_model('animalcondition/animal_danger_model.h5')
-preprocessor = joblib.load('animalcondition/preprocessor.pkl')
-label_encoder = joblib.load('animalcondition/label_encoder.pkl')
+# Global variables to store models and preprocessors
+animal_model = None
+toxicity_model = None
+pet_food_model = None
+preprocessor = None
+label_encoder = None
+vectorizer = None
+models_loaded = False
 
-# Load model and prepare vectorizer for comment toxicity prediction
-toxicity_model = load_model('checkcommenttoxicity/toxicity.h5')
+def load_models():
+    global animal_model, toxicity_model, pet_food_model, preprocessor, label_encoder, vectorizer, models_loaded
+    
+    if not models_loaded:
+        print("Loading models...")
+        # Load models and preprocessors for animal condition prediction
+        animal_model = load_model('animalcondition/animal_danger_model.h5')
+        preprocessor = joblib.load('animalcondition/preprocessor.pkl')
+        label_encoder = joblib.load('animalcondition/label_encoder.pkl')
 
-# Load dataset to adapt the TextVectorizer
-df = pd.read_csv('checkcommenttoxicity/train.csv')
-MAX_FEATURES = 200000
+        # Load model for comment toxicity prediction
+        toxicity_model = load_model('checkcommenttoxicity/toxicity.h5')
 
-vectorizer = TextVectorization(max_tokens=MAX_FEATURES,
-                               output_sequence_length=2000,
-                               output_mode='int')
-vectorizer.adapt(df['comment_text'].values)
+        # Load dataset to adapt the TextVectorization
+        df = pd.read_csv('checkcommenttoxicity/train.csv')
+        MAX_FEATURES = 200000
 
-# Load the pet food prediction model
-pet_food_model = PetFoodModel.load_model('./petfoodrecipe/pet_food_model.joblib')
+        vectorizer = TextVectorization(max_tokens=MAX_FEATURES,
+                                       output_sequence_length=2000,
+                                       output_mode='int')
+        vectorizer.adapt(df['comment_text'].values)
+
+        # Load the pet food prediction model
+        pet_food_model = PetFoodModel.load_model('./petfoodrecipe/pet_food_model.joblib')
+
+        models_loaded = True
+        print("Models loaded successfully.")
+
+@app.before_request
+def before_request():
+    load_models()
 
 @app.route('/')
 def home():
@@ -44,7 +67,6 @@ def predict_animal():
         return jsonify({'error': 'Missing required fields'}), 400
     
     input_df = pd.DataFrame([data])
-    
     input_df = input_df[required_fields]
     
     input_encoded = preprocessor.transform(input_df).toarray()
@@ -84,9 +106,8 @@ def analyze_medical_reports():
     try:
         file_objects = []
         for file in files:
-            # Create a BytesIO object and write the file content to it
             file_object = io.BytesIO(file.read())
-            file_object.name = file.filename  # Add the filename attribute
+            file_object.name = file.filename
             file_objects.append(file_object)
         
         results = analyze_reports(file_objects)
@@ -115,4 +136,4 @@ def predict_pet_food():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=False, port=8000, host='0.0.0.0')
