@@ -6,6 +6,7 @@ import 'package:manipal_app/models/user.dart';
 import 'package:manipal_app/resources/user_provider.dart';
 import 'package:manipal_app/screens/home_screen/articles/article_screen.dart';
 import 'package:manipal_app/screens/home_screen/calendar.dart';
+import 'package:manipal_app/screens/pet_babysitting.dart';
 import 'package:manipal_app/screens/pet_travel/pet_travel_screen.dart';
 import 'package:manipal_app/screens/train_pet/basics_screen.dart';
 import 'package:provider/provider.dart';
@@ -174,6 +175,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           }
                           if(index==4){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>basicScreen()));
+                          }
+                          if(index==2){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>PetBabySitting()));
                           }
                       },
                     );
