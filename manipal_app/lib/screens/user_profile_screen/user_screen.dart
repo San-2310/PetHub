@@ -28,7 +28,7 @@ class UserScreen extends StatelessWidget {
                 Stack(
                   children: [
                     CircleAvatar(
-                      radius: 110,
+                      radius: 90,
                       backgroundImage: NetworkImage(user!.photoUrl),
                     ),
                     Positioned(
@@ -92,12 +92,12 @@ Widget circularGradientContainer(String text, BuildContext context) {
     width: MediaQuery.of(context).size.width * 0.4,
     alignment: Alignment.center,
     decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [AppColors.darkGreen,AppColors.mediumGray]),
+        gradient: LinearGradient(colors: [AppColors.darkGreen,AppColors.mediumGreen]),
         borderRadius: BorderRadius.circular(25),
         border: Border.all(color: Color.fromARGB(255, 255, 255, 255))),
     child: Text(
       text,
-      style: TextStyle(color: Colors.white),
+      style: TextStyle(color: Colors.black),
     ),
   );
 }
