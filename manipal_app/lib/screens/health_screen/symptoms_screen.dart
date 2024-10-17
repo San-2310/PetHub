@@ -59,7 +59,7 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
       return;
     }
 
-    final url = Uri.parse('https://8ac1-2409-40c0-105f-b7a7-45d5-a4de-ac60-cb3a.ngrok-free.app/check_animal_condition');
+    final url = Uri.parse('https://ee12-2409-40c0-105f-b7a7-fc45-b070-b299-6bf7.ngrok-free.app/check_animal_condition');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},

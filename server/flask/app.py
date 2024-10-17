@@ -10,6 +10,7 @@ import joblib
 from reportanalysis.report_analyzer import analyze_reports
 import io
 from petfoodrecipe.pet_food_model import PetFoodModel
+from PIL import Image  # Added for image processing
 
 app = Flask(__name__)
 
@@ -17,13 +18,14 @@ app = Flask(__name__)
 animal_model = None
 toxicity_model = None
 pet_food_model = None
+pet_age_model = None  # Added for pet age model
 preprocessor = None
 label_encoder = None
 vectorizer = None
 models_loaded = False
 
 def load_models():
-    global animal_model, toxicity_model, pet_food_model, preprocessor, label_encoder, vectorizer, models_loaded
+    global animal_model, toxicity_model, pet_food_model, pet_age_model, preprocessor, label_encoder, vectorizer, models_loaded
     
     if not models_loaded:
         print("Loading models...")
@@ -46,6 +48,9 @@ def load_models():
 
         # Load the pet food prediction model
         pet_food_model = PetFoodModel.load_model('./petfoodrecipe/pet_food_model.joblib')
+
+        # Load the pet age prediction model
+        pet_age_model = joblib.load('./petageestimator/pet_age_model.joblib')  # Added for pet age model
 
         models_loaded = True
         print("Models loaded successfully.")
@@ -132,6 +137,31 @@ def predict_pet_food():
             'cooking_method': cooking_method,
             'note': 'This prediction is based on the closest match in our database.'
         })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+# Pet age prediction route
+def preprocess_image(image):
+    img = Image.open(io.BytesIO(image))
+    img = img.resize((64, 64))
+    img_array = np.array(img) / 255.0
+    return np.expand_dims(img_array, axis=0)
+
+@app.route('/predict_pet_age', methods=['POST'])
+def predict_pet_age():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part in the request'}), 400
+    
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No file selected for uploading'}), 400
+    
+    try:
+        img = file.read()
+        processed_image = preprocess_image(img)
+        prediction = pet_age_model.predict(processed_image)  # Use pet_age_model for prediction
+        age_month = prediction[0][0]
+        return jsonify({'age_month': float(age_month)}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 

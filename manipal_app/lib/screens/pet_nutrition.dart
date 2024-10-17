@@ -240,7 +240,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
   }
 
   Future<void> fetchRecipe() async {
-    final url = Uri.parse('https://8ac1-2409-40c0-105f-b7a7-45d5-a4de-ac60-cb3a.ngrok-free.app/predict_pet_food');
+    final url = Uri.parse('https://ee12-2409-40c0-105f-b7a7-fc45-b070-b299-6bf7.ngrok-free.app/predict_pet_food');
     final headers = {'Content-Type': 'application/json'};
     final body = json.encode({
       'breed': widget.breed,
