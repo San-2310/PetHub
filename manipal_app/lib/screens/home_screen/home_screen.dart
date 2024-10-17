@@ -5,6 +5,8 @@ import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/models/user.dart';
 import 'package:manipal_app/resources/user_provider.dart';
 import 'package:manipal_app/screens/home_screen/calendar.dart';
+import 'package:manipal_app/screens/pet_travel/pet_travel_screen.dart';
+import 'package:manipal_app/screens/train_pet/basics_screen.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -32,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final User user = Provider.of<UserProvider>(context).getUser;
+    final User? user = Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
@@ -68,6 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   });
                                 },
                                 child: Container(
+                                  height: 90,
+                                  width: 90,
                                   margin: const EdgeInsets.only(bottom: 8),
                                   padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
@@ -162,7 +166,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     var cObj = catArr[index] as Map? ?? {};
                     return CategoryCell(
                       cObj: cObj,
-                      onTap: () {},
+                      onTap: () {
+                        if(index==1)
+                          {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>PetTravelScreen()));
+                          }
+                          if(index==4){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>basicScreen()));
+                          }
+                      },
                     );
                   }),
                 ),

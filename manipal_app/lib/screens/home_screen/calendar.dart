@@ -92,7 +92,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Free Calendar Integration'),
+        title: Text('Calendar'),
       ),
       body: Column(
         children: [
