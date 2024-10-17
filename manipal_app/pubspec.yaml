@@ -52,6 +52,8 @@ dependencies:
   video_player: ^2.9.2
   velocity_x: ^4.2.1
   chewie: ^1.8.5
+  file_picker: ^5.2.10
+  path: ^1.8.0
 
 dev_dependencies:
   flutter_test:

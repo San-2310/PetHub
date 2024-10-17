@@ -8,6 +8,7 @@ import 'package:manipal_app/screens/home_screen/calendar.dart';
 import 'package:manipal_app/screens/pet_travel/pet_travel_screen.dart';
 import 'package:manipal_app/screens/train_pet/basics_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:manipal_app/screens/summarizer/summarizer.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
@@ -184,10 +185,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontSize: 25,
                 color: AppColors.mediumGray,
               ),),
+              SizedBox(height: 20),
+              ElevatedButton(
+                child: Text('Report Summarizer'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SummarizerScreen()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                 // primary: Colors.green,
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
   }
+  
 }
