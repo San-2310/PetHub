@@ -44,7 +44,7 @@ class AppDrawer extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: _buildDrawerItem(context, 'Adopt Pet', Icons.pets, PetAdoptScreen(), '/adopt_pet'),
+            child: _buildDrawerItem(context, 'Adopt Pet', Icons.pets, PetAdoptionScreen(), '/adopt_pet'),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),

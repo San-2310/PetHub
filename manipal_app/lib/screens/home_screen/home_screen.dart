@@ -21,18 +21,18 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List imageUrls = [
-    'https://images.pexels.com/photos/2318990/pexels-photo-2318990.jpeg?cs=srgb&dl=pexels-mithulvarshan-2318990.jpg&fm=jpg',
-    'https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg',
-    'https://img.freepik.com/premium-photo/dog-cat-are-laying-rug-with-dog-pet-care-hd-quality-image-website_1286196-1697.jpg'
+    'assets/svg/dog.png',
+    'assets/svg/dog.png',
+    'assets/svg/dog.png'
   ];
   int _selectedIndex = 1;
 
   List catArr = [
-    {"image": "assets/Icons/service.png", "name": "Pet Grooming"},
-    {"image": "assets/Icons/service.png", "name": "Pet Travel Planning"},
-    {"image": "assets/svg/babysitting.png", "name": "Pet babysitting"},
-    {"image": "assets/Icons/service.png", "name": "Photoshoot"},
-    {"image": "assets/Icons/service.png", "name": "Pet Training"},
+    {"image": "assets/svg/grooming.png", "name": "Grooming"},
+    {"image": "assets/svg/travel.png", "name": "Travel Planning"},
+    {"image": "assets/svg/babysit.png", "name": "Babysitting"},
+    {"image": "assets/svg/photoshoot.png", "name": "Photoshoot"},
+    {"image": "assets/Icons/service.png", "name": "Training"},
   ];
 
   @override
@@ -46,20 +46,23 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: AppDrawer(currentRoute: '/home'),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(2.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
-                    border: Border.all(color: Colors.black)),
+                    //border: Border.all(color: Colors.black)
+                    color: const Color.fromRGBO(251, 233, 233, 0.85),
+                    ),
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top:40.0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      SizedBox(height: 10,),
                       Expanded(
                         flex: 1,
                         child: Column(
@@ -73,8 +76,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   });
                                 },
                                 child: Container(
-                                  height: 90,
-                                  width: 90,
+                                  height: 40,
+                                  width: 40,
                                   margin: const EdgeInsets.only(bottom: 8),
                                   padding: const EdgeInsets.all(2),
                                   decoration: BoxDecoration(
@@ -86,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
-                                  child: Image.network(
+                                  child: Image.asset(
                                     imageUrls[index],
                                     height: 50,
                                     width: 50,
@@ -97,21 +100,22 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
+                      
                       Expanded(
-                        flex: 2,
+                        flex: 4,
                         child: Container(
                             height: 300,
                             decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey, width: 2),
+                             // border: Border.all(color: Colors.grey, width: 2),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image.network(
+                                Image.asset(
                                   imageUrls[_selectedIndex],
-                                  height: 150,
-                                  width: 150,
+                                  height: 100,
+                                  width: 100,
                                 ),
                                 Column(
                                   children: [
@@ -124,18 +128,25 @@ class _HomeScreenState extends State<HomeScreen> {
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    Text(
+                                    Row(
+                                      children: [
+                                        SizedBox(width: 10,),
+                                        Text(
                                       'Breed',
                                       style: TextStyle(
                                           fontSize: 15,
                                           color: AppColors.mediumGray),
                                     ),
+                                    SizedBox(width: 20,),
                                     Text(
                                       '2 yrs',
                                       style: TextStyle(
                                           fontSize: 15,
                                           color: AppColors.mediumGray),
                                     ),
+                                      ],
+                                    ),
+                                    
                                     SizedBox(
                                       height: 20,
                                     ),
