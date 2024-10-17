@@ -21,7 +21,7 @@ class TabButton extends StatelessWidget {
             icon,
             width: isSelected?15:19,
             height: isSelected?15:15,
-            color: isSelected ? const Color.fromARGB(255, 35, 57, 12) :  AppColors.darkGreen,
+            color: isSelected ? Colors.black :  AppColors.mediumGray,
           ),
           const SizedBox(
             height: 4,
@@ -29,7 +29,7 @@ class TabButton extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-              color: isSelected ? const Color.fromARGB(255, 35, 57, 12):  AppColors.darkGreen,
+              color: isSelected ? Colors.black:  AppColors.mediumGray,
               fontSize: isSelected?15:12,
               fontWeight: FontWeight.w500,
             ),

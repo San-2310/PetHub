@@ -143,15 +143,34 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/components/tab_button.dart';
+import 'package:manipal_app/resources/user_provider.dart';
 import 'package:manipal_app/screens/health_screen/health_screen.dart';
 import 'package:manipal_app/screens/ecommerce_screen/ecommerce_screen.dart';
 import 'package:manipal_app/screens/home_screen/home_screen.dart';
 import 'package:manipal_app/screens/community_screen/community_screen.dart';
 import 'package:manipal_app/screens/user_profile_screen/user_screen.dart';
 import 'package:manipal_app/controllers/home_controller.dart';
+import 'package:provider/provider.dart';
 
-class MainLayout extends StatelessWidget {
+class MainLayout extends StatefulWidget {
   MainLayout({Key? key}) : super(key: key);
+
+  @override
+  State<MainLayout> createState() => _MainLayoutState();
+}
+
+class _MainLayoutState extends State<MainLayout> {
+
+  @override
+  void initState(){
+    super.initState();
+    addData();
+  }
+
+  addData() async{
+    UserProvider _userProvider = Provider.of(context, listen:false);
+    await _userProvider.refreshUser();
+  }
 
   final controller = Get.put(HomeController());
 
@@ -167,7 +186,7 @@ class MainLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(() => navBody[controller.currentNavIndex.value]),
-      backgroundColor: AppColors.paleGreen,
+      backgroundColor: Colors.white,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Obx(() => SizedBox(
         width: 60,
@@ -176,16 +195,18 @@ class MainLayout extends StatelessWidget {
           onPressed: () => controller.currentNavIndex.value = 2,
           shape: const CircleBorder(),
           backgroundColor: controller.currentNavIndex.value == 2 
-              ? AppColors.darkGreen 
+              ? AppColors.paleGreen 
               : AppColors.paleGreen,
           child: Image.asset(
             "assets/Icons/home.png",
             width: 30,
             height: 30,
+            color: controller.currentNavIndex.value == 2 ? Colors.black:AppColors.lightGray,
           ),
         ),
       )),
       bottomNavigationBar: Obx(() => BottomAppBar(
+        color: AppColors.paleGreen,
         surfaceTintColor: Colors.white,
         shadowColor: Colors.black,
         elevation: 1,
