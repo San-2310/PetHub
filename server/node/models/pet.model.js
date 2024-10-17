@@ -31,7 +31,7 @@ const petSchema = new mongoose.Schema({
   },
   pic:{
     type:String,
-    required:true,
+
   }
 }, { timestamps: true });
 
