@@ -4,6 +4,7 @@ import 'package:manipal_app/components/category_cell.dart';
 import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/models/user.dart';
 import 'package:manipal_app/resources/user_provider.dart';
+import 'package:manipal_app/screens/home_screen/articles/article_screen.dart';
 import 'package:manipal_app/screens/home_screen/calendar.dart';
 import 'package:manipal_app/screens/pet_travel/pet_travel_screen.dart';
 import 'package:manipal_app/screens/train_pet/basics_screen.dart';
@@ -199,6 +200,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 ),
               ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ArticlesScreen()));
+              }, child: Text('Article'))
             ],
           ),
         ),
