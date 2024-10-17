@@ -3,29 +3,24 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'  # Disable oneDNN custom operations
 
 from flask import Flask, request, jsonify, render_template
 from tensorflow.keras.models import load_model
-from tensorflow.keras.layers import TextVectorization
 import numpy as np
 import pandas as pd
 import joblib
 from reportanalysis.report_analyzer import analyze_reports
 import io
 from petfoodrecipe.pet_food_model import PetFoodModel
-from PIL import Image  # Added for image processing
 
 app = Flask(__name__)
 
 # Global variables to store models and preprocessors
 animal_model = None
-toxicity_model = None
 pet_food_model = None
-pet_age_model = None  # Added for pet age model
 preprocessor = None
 label_encoder = None
-vectorizer = None
 models_loaded = False
 
 def load_models():
-    global animal_model, toxicity_model, pet_food_model, pet_age_model, preprocessor, label_encoder, vectorizer, models_loaded
+    global animal_model, pet_food_model, preprocessor, label_encoder, models_loaded
     
     if not models_loaded:
         print("Loading models...")
@@ -34,23 +29,8 @@ def load_models():
         preprocessor = joblib.load('animalcondition/preprocessor.pkl')
         label_encoder = joblib.load('animalcondition/label_encoder.pkl')
 
-        # Load model for comment toxicity prediction
-        toxicity_model = load_model('checkcommenttoxicity/toxicity.h5')
-
-        # Load dataset to adapt the TextVectorization
-        df = pd.read_csv('checkcommenttoxicity/train.csv')
-        MAX_FEATURES = 200000
-
-        vectorizer = TextVectorization(max_tokens=MAX_FEATURES,
-                                       output_sequence_length=2000,
-                                       output_mode='int')
-        vectorizer.adapt(df['comment_text'].values)
-
         # Load the pet food prediction model
         pet_food_model = PetFoodModel.load_model('./petfoodrecipe/pet_food_model.joblib')
-
-        # Load the pet age prediction model
-        pet_age_model = joblib.load('./petageestimator/pet_age_model.joblib')  # Added for pet age model
 
         models_loaded = True
         print("Models loaded successfully.")
@@ -86,17 +66,6 @@ def predict_animal():
         'prediction': str(predicted_label),
         'probability': float(prediction[0][0])
     })
-
-@app.route('/check_comment_toxicity', methods=['POST'])
-def predict_toxicity():
-    data = request.json
-    comment_text = data['text']
-    
-    vectorized_text = vectorizer([comment_text])
-    
-    prediction = (toxicity_model.predict(vectorized_text) > 0.5).astype(int).tolist()
-    
-    return jsonify({'prediction': prediction})
 
 @app.route('/analyze_medical_reports', methods=['POST'])
 def analyze_medical_reports():
@@ -137,31 +106,6 @@ def predict_pet_food():
             'cooking_method': cooking_method,
             'note': 'This prediction is based on the closest match in our database.'
         })
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-# Pet age prediction route
-def preprocess_image(image):
-    img = Image.open(io.BytesIO(image))
-    img = img.resize((64, 64))
-    img_array = np.array(img) / 255.0
-    return np.expand_dims(img_array, axis=0)
-
-@app.route('/predict_pet_age', methods=['POST'])
-def predict_pet_age():
-    if 'file' not in request.files:
-        return jsonify({'error': 'No file part in the request'}), 400
-    
-    file = request.files['file']
-    if file.filename == '':
-        return jsonify({'error': 'No file selected for uploading'}), 400
-    
-    try:
-        img = file.read()
-        processed_image = preprocess_image(img)
-        prediction = pet_age_model.predict(processed_image)  # Use pet_age_model for prediction
-        age_month = prediction[0][0]
-        return jsonify({'age_month': float(age_month)}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
