@@ -117,16 +117,36 @@ class _SummarizerScreenState extends State<SummarizerScreen> {
               color: Colors.grey[200],
               borderRadius: BorderRadius.circular(10),
             ),
-            child: IconButton(
-              icon: Icon(Icons.upload_file, size: 50),
-              onPressed: _pickFile,
-            ),
+            child: _file == null
+                ? IconButton(
+                    icon: Icon(Icons.upload_file, size: 50),
+                    onPressed: _pickFile,
+                  )
+                : Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.file_present, size: 50, color: Colors.green),
+                      SizedBox(height: 10),
+                      Text(
+                        'File Uploaded',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        path.basename(_file!.path),
+                        style: TextStyle(fontSize: 12),
+                        textAlign: TextAlign.center,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                  ),
           ),
           SizedBox(height: 20),
-          Text('Upload File Here', style: TextStyle(fontSize: 18)),
-          SizedBox(
-            height: 20,
+          Text(
+            _file == null ? 'Upload File Here' : 'File Ready for Analysis',
+            style: TextStyle(fontSize: 18),
           ),
+          SizedBox(height: 20),
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -145,12 +165,10 @@ class _SummarizerScreenState extends State<SummarizerScreen> {
               onPressed: _file != null ? _analyzePdf : null,
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                backgroundColor: Colors
-                    .transparent, // Make button background transparent to show gradient
-                shadowColor: Colors
-                    .transparent, // Disable shadow to avoid conflicting with gradient
+                backgroundColor: Colors.transparent,
+                shadowColor: Colors.transparent,
               ),
-              child: Text('Proceed'),
+              child: Text(_file != null ? 'Analyze PDF' : 'Proceed'),
             ),
           ),
         ],
