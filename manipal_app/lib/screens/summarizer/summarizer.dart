@@ -85,18 +85,7 @@ class _SummarizerScreenState extends State<SummarizerScreen> {
       appBar: AppBar(
         title: Text('Reports'),
         actions: [
-          IconButton(
-            icon: Icon(Icons.light_mode),
-            onPressed: () {
-              // Implement theme toggle
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.notifications),
-            onPressed: () {
-              // Implement notifications
-            },
-          ),
+          
         ],
       ),
       body: _isLoading
