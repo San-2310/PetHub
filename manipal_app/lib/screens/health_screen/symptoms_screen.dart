@@ -52,32 +52,42 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
   }
 
   Future<void> sendRequest() async {
-    if (selectedSymptoms.length != 5) {
+    if (selectedSymptoms.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please select exactly 5 symptoms')),
+        SnackBar(content: Text('Please select at least one symptom')),
       );
       return;
     }
 
-    final url = Uri.parse('https://ee12-2409-40c0-105f-b7a7-fc45-b070-b299-6bf7.ngrok-free.app/check_animal_condition');
+    final url = Uri.parse('https://87b0-2409-40c0-105f-b7a7-107-c665-1b9d-fd18.ngrok-free.app/check_animal_condition');
+    
+    // Prepare the symptoms list for API, filling with empty strings if less than 5
+    List<String> apiSymptoms = List.from(selectedSymptoms);
+    while (apiSymptoms.length < 5) {
+      apiSymptoms.add("");
+    }
+
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
       body: json.encode({
         'AnimalName': animalName,
-        'symptoms1': selectedSymptoms[0],
-        'symptoms2': selectedSymptoms[1],
-        'symptoms3': selectedSymptoms[2],
-        'symptoms4': selectedSymptoms[3],
-        'symptoms5': selectedSymptoms[4],
+        'symptoms1': apiSymptoms[0],
+        'symptoms2': apiSymptoms[1],
+        'symptoms3': apiSymptoms[2],
+        'symptoms4': apiSymptoms[3],
+        'symptoms5': apiSymptoms[4],
       }),
     );
 
     if (response.statusCode == 200) {
       final result = json.decode(response.body);
       final prediction = result['prediction'];
-      final probability = result['probability'] as double;
+      double probability = result['probability'] as double;
       
+      // Adjust probability based on number of symptoms selected
+      probability = probability * (selectedSymptoms.length / 5);
+
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -106,7 +116,7 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Select exactly 5 symptoms',
+                'Select up to 5 symptoms',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -267,12 +277,12 @@ class _DangerScreenState extends State<DangerScreen> with SingleTickerProviderSt
               ),
               SizedBox(height: 20),
               Text(
-                'Oh no!',
+                'Warning',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
               Text(
-                'Your ${widget.animalName} might need help!',
+                'Your pet is not well.',
                 style: TextStyle(fontSize: 18),
                 textAlign: TextAlign.center,
               ),
@@ -384,7 +394,6 @@ class _SafeScreenState extends State<SafeScreen> with SingleTickerProviderStateM
                 },
                 child: Text('Back to Symptoms'),
                 style: ElevatedButton.styleFrom(
-                 // primary: Colors.blue,
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 ),
               ),
@@ -416,7 +425,7 @@ class GradedMeter extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: (200 - 20) * value,
+            left: math.max(10.0, math.min((200 - 20) * value, 190.0)), // Keep circle between left and center
             child: Container(
               width: 20,
               height: 20,
