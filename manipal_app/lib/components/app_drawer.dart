@@ -5,6 +5,7 @@ import 'package:manipal_app/components/navbar.dart';
 import 'package:manipal_app/screens/adopt_pets/adopt_pet_screen.dart';
 import 'package:manipal_app/screens/home_screen/home_screen.dart';
 import 'package:manipal_app/screens/insurance/insurance_screen.dart';
+import 'package:manipal_app/screens/pet_nutrition.dart';
 import 'package:manipal_app/screens/pet_travel/pet_travel_screen.dart';
 
 class AppDrawer extends StatelessWidget {
@@ -52,6 +53,10 @@ class AppDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: _buildDrawerItem(context, 'Pet Travel', Icons.place_outlined, PetTravelScreen(), '/pet_travel'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: _buildDrawerItem(context, 'Pet Nutrition', Icons.food_bank_outlined, PetNutritionScreen(), '/pet_nutrition'),
           ),
           
           //_buildDrawerItem(context, 'Features', Icons.star, FeaturesScreen(), '/features'),

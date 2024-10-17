@@ -144,6 +144,7 @@ import 'package:get/get.dart';
 import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/components/tab_button.dart';
 import 'package:manipal_app/resources/user_provider.dart';
+import 'package:manipal_app/screens/community_screen/feed_screen.dart';
 import 'package:manipal_app/screens/health_screen/health_screen.dart';
 import 'package:manipal_app/screens/ecommerce_screen/ecommerce_screen.dart';
 import 'package:manipal_app/screens/home_screen/home_screen.dart';
@@ -178,7 +179,7 @@ class _MainLayoutState extends State<MainLayout> {
      HealthScreen(),
      EcommerceScreen(),
      HomeScreen(),
-     CommunityScreen(),
+     FeedScreen(),
      UserScreen(),
   ];
 
