@@ -41,57 +41,120 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
   List<String> selectedSymptoms = [];
   String animalName = 'Tommy'; // Default animal name
 
+  // void toggleSymptom(String symptom) {
+  //   setState(() {
+  //     if (selectedSymptoms.contains(symptom)) {
+  //       selectedSymptoms.remove(symptom);
+  //     } else if (selectedSymptoms.length < 5) {
+  //       selectedSymptoms.add(symptom);
+  //     }
+  //   });
+  // }
+
   void toggleSymptom(String symptom) {
-    setState(() {
-      if (selectedSymptoms.contains(symptom)) {
-        selectedSymptoms.remove(symptom);
-      } else if (selectedSymptoms.length < 5) {
-        selectedSymptoms.add(symptom);
-      }
-    });
-  }
+  setState(() {
+    if (selectedSymptoms.contains(symptom)) {
+      selectedSymptoms.remove(symptom);
+    } else if (selectedSymptoms.length < 5) { // This allows up to 5
+      selectedSymptoms.add(symptom);
+    }
+  });
+}
+
+  // Future<void> sendRequest() async {
+  //   if (selectedSymptoms.length > 5) {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text('Please select max 5 symptoms')),
+  //     );
+  //     return;
+  //   }
+
+  //   List<String> paddedSymptoms = List.from(selectedSymptoms);
+  // while (paddedSymptoms.length < 5) {
+  //   paddedSymptoms.add(''); // Pad with empty strings if less than 5 symptoms
+  // }
+
+  //   final url = Uri.parse('https://e4da-45-112-144-64.ngrok-free.app/check_animal_condition');
+  //   final response = await http.post(
+  //     url,
+  //     headers: {'Content-Type': 'application/json'},
+  //     body: json.encode({
+  //       'AnimalName': animalName,
+  //       'symptoms1': selectedSymptoms[0],
+  //       'symptoms2': selectedSymptoms[1],
+  //       'symptoms3': selectedSymptoms[2],
+  //       'symptoms4': selectedSymptoms[3],
+  //       'symptoms5': selectedSymptoms[4],
+  //     }),
+  //   );
+
+  //   if (response.statusCode == 200) {
+  //     final result = json.decode(response.body);
+  //     final prediction = result['prediction'];
+  //     final probability = result['probability'] as double;
+      
+  //     Navigator.push(
+  //       context,
+  //       MaterialPageRoute(
+  //         builder: (context) => prediction == 'Yes'
+  //             ? DangerScreen(animalName: animalName, probability: probability)
+  //             : SafeScreen(animalName: animalName, probability: probability),
+  //       ),
+  //     );
+  //   } else {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text('Error sending request')),
+  //     );
+  //   }
+  // }
 
   Future<void> sendRequest() async {
-    if (selectedSymptoms.length != 5) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please select exactly 5 symptoms')),
-      );
-      return;
-    }
-
-    final url = Uri.parse('https://8ac1-2409-40c0-105f-b7a7-45d5-a4de-ac60-cb3a.ngrok-free.app/check_animal_condition');
-    final response = await http.post(
-      url,
-      headers: {'Content-Type': 'application/json'},
-      body: json.encode({
-        'AnimalName': animalName,
-        'symptoms1': selectedSymptoms[0],
-        'symptoms2': selectedSymptoms[1],
-        'symptoms3': selectedSymptoms[2],
-        'symptoms4': selectedSymptoms[3],
-        'symptoms5': selectedSymptoms[4],
-      }),
+  if (selectedSymptoms.isEmpty) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Please select at least one symptom')),
     );
-
-    if (response.statusCode == 200) {
-      final result = json.decode(response.body);
-      final prediction = result['prediction'];
-      final probability = result['probability'] as double;
-      
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => prediction == 'Yes'
-              ? DangerScreen(animalName: animalName, probability: probability)
-              : SafeScreen(animalName: animalName, probability: probability),
-        ),
-      );
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error sending request')),
-      );
-    }
+    return;
   }
+
+  // Ensure we send exactly 5 symptoms by padding the list with empty strings
+  List<String> paddedSymptoms = List.from(selectedSymptoms);
+  while (paddedSymptoms.length < 5) {
+    paddedSymptoms.add(''); // Pad with empty strings if less than 5 symptoms
+  }
+
+  final url = Uri.parse('https://e4da-45-112-144-64.ngrok-free.app/check_animal_condition');
+  final response = await http.post(
+    url,
+    headers: {'Content-Type': 'application/json'},
+    body: json.encode({
+      'AnimalName': animalName,
+      'symptoms1': paddedSymptoms[0],  // Use paddedSymptoms instead of selectedSymptoms
+      'symptoms2': paddedSymptoms[1],
+      'symptoms3': paddedSymptoms[2],
+      'symptoms4': paddedSymptoms[3],
+      'symptoms5': paddedSymptoms[4],
+    }),
+  );
+
+  if (response.statusCode == 200) {
+    final result = json.decode(response.body);
+    final prediction = result['prediction'];
+    final probability = result['probability'] as double;
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => prediction == 'Yes'
+            ? DangerScreen(animalName: animalName, probability: probability)
+            : SafeScreen(animalName: animalName, probability: probability),
+      ),
+    );
+  } else {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Error sending request')),
+    );
+  }
+}
 
   @override
   Widget build(BuildContext context) {

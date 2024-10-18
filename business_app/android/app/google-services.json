@@ -1,0 +1,134 @@
+{
+  "project_info": {
+    "project_number": "809418704719",
+    "project_id": "manipal-e7134",
+    "storage_bucket": "manipal-e7134.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809418704719:android:6e6412af2adbd76aa2673a",
+        "android_client_info": {
+          "package_name": "com.example.akhil_reddit_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809418704719-f3jkq38ulc8ullg5f5dk4d9l9kap0vbv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.akhil_reddit_clone",
+            "certificate_hash": "c622b9205fdd1e3d7d36433fe31e2903938f5a8d"
+          }
+        },
+        {
+          "client_id": "809418704719-97s834nh9ov9fvrfg4ajv7tamuo0edc7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3ZMEG5Scl5qfhsxgnnMCbZc8syPAPk7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809418704719-97s834nh9ov9fvrfg4ajv7tamuo0edc7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "809418704719-cht2d4ft5ksdstqn83d26jr31a3o85de.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.akhilRedditClone"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809418704719:android:7bf60efeba669f50a2673a",
+        "android_client_info": {
+          "package_name": "com.example.business_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809418704719-97s834nh9ov9fvrfg4ajv7tamuo0edc7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3ZMEG5Scl5qfhsxgnnMCbZc8syPAPk7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809418704719-97s834nh9ov9fvrfg4ajv7tamuo0edc7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "809418704719-cht2d4ft5ksdstqn83d26jr31a3o85de.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.akhilRedditClone"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809418704719:android:99371ebc1664efa6a2673a",
+        "android_client_info": {
+          "package_name": "com.example.manipal_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809418704719-sbikn578qspibftte3ubsj39actfiujm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.manipal_app",
+            "certificate_hash": "c622b9205fdd1e3d7d36433fe31e2903938f5a8d"
+          }
+        },
+        {
+          "client_id": "809418704719-97s834nh9ov9fvrfg4ajv7tamuo0edc7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3ZMEG5Scl5qfhsxgnnMCbZc8syPAPk7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809418704719-97s834nh9ov9fvrfg4ajv7tamuo0edc7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "809418704719-cht2d4ft5ksdstqn83d26jr31a3o85de.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.akhilRedditClone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

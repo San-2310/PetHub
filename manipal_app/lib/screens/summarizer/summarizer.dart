@@ -39,7 +39,7 @@ class _SummarizerScreenState extends State<SummarizerScreen> {
 
     try {
       final url = Uri.parse(
-          'https://8ac1-2409-40c0-105f-b7a7-45d5-a4de-ac60-cb3a.ngrok-free.app/analyze_medical_reports');
+          'https://e4da-45-112-144-64.ngrok-free.app/analyze_medical_reports');
 
       var request = http.MultipartRequest('POST', url);
       // Add the file to the request

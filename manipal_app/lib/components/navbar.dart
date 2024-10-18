@@ -177,7 +177,7 @@ class _MainLayoutState extends State<MainLayout> {
 
   final List<Widget> navBody = [
      HealthScreen(),
-     EcommerceScreen(),
+     EcommerceHomeScreen(),
      HomeScreen(),
      FeedScreen(),
      UserScreen(),

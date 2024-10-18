@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manipal_app/components/doctor_card.dart';
 import 'package:manipal_app/models/vet.dart';
+import 'package:manipal_app/screens/health_screen/chat.dart';
 
 class VetConnectScreen extends StatelessWidget {
   const VetConnectScreen({super.key});
@@ -39,7 +40,11 @@ class VetConnectScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 16),
-                      child: DoctorCard(doctor: doctorsList[index]),
+                      child: GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatInterface()));
+                        },
+                        child: DoctorCard(doctor: doctorsList[index])),
                     );
                   },
                 ),

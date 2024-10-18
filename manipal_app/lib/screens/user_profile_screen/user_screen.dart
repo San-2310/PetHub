@@ -2,7 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/models/user.dart';
+import 'package:manipal_app/resources/auth_methods.dart';
 import 'package:manipal_app/resources/user_provider.dart';
+import 'package:manipal_app/screens/auth_screens/login.dart';
 import 'package:provider/provider.dart';
 
 class UserScreen extends StatelessWidget {
@@ -14,6 +16,14 @@ class UserScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('User Profile'),
+        actions: [
+          GestureDetector(
+            onTap: ()async{
+              await AuthMethods().signOut;
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>LoginScreen()));
+            },
+            child: Icon(Icons.logout)),
+        ],
       ),
       //drawer: AppDrawer(currentRoute: '/user_profile',),
       body: SingleChildScrollView(

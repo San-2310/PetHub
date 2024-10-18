@@ -80,5 +80,14 @@ class AuthMethods{
     return res;
   }
 
+  Future<void> signOut() async {
+  try {
+    await FirebaseAuth.instance.signOut();
+    print('User signed out successfully');
+  } catch (e) {
+    print('Error signing out: $e');
+  }
+}
+
 
 }

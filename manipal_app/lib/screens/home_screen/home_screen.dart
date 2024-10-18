@@ -4,6 +4,7 @@ import 'package:manipal_app/components/category_cell.dart';
 import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/models/user.dart';
 import 'package:manipal_app/resources/user_provider.dart';
+//import 'package:manipal_app/screens/chat_screen/chat_screen.dart';
 import 'package:manipal_app/screens/home_screen/articles/article_screen.dart';
 import 'package:manipal_app/screens/home_screen/calendar.dart';
 import 'package:manipal_app/screens/pet_babysitting.dart';
@@ -146,16 +147,37 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                       ],
                                     ),
-                                    
-                                    SizedBox(
-                                      height: 20,
+                                    SizedBox(height: 6,),
+                                    Row(
+                                      children: [
+                                        SizedBox(
+                                      width: 6,
                                     ),
                                     GestureDetector(
                                       onTap: (){
                                         Navigator.push(context, MaterialPageRoute(builder: (context)=>CalendarScreen()));
                                       },
                                         child: Image.asset(
-                                            'assets/Icons/Calendar.png'))
+                                            'assets/Icons/Calendar.png')),
+                                            SizedBox(width: 10,),
+                                            Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Text('Vet Appointment'),
+                                                Text('Event'),
+                                              ],
+                                            ),
+                                            
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(Icons.file_copy),
+                                        SizedBox(width: 6,),
+                                        Text('Report Summary')
+                                      ],
+                                    )
+                                    
                                   ],
                                 )
                               ],
@@ -181,6 +203,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     return CategoryCell(
                       cObj: cObj,
                       onTap: () {
+                        if(index==0)
+                          {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>PetTravelScreen()));
+                          }
                         if(index==1)
                           {
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>PetTravelScreen()));
@@ -189,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>basicScreen()));
                           }
                           if(index==2){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>PetBabySitting()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>PetBabySitting(userUid: user!.uid,)));
                           }
                       },
                     );
@@ -217,7 +243,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>ArticlesScreen()));
-              }, child: Text('Article'))
+              }, child: Text('Article')),
+              // ElevatedButton(onPressed: (){
+              //   Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatScreen()));
+              // }, child: Text('Chat'))
             ],
           ),
         ),
