@@ -1,7 +1,13 @@
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:manipal_app/components/colors.dart';
 import 'package:manipal_app/components/text_field_input.dart';
+
+
+
 
 class PetNutritionScreen extends StatelessWidget {
   @override
@@ -18,7 +24,6 @@ class PetNutritionScreen extends StatelessWidget {
               height: 250,
               fit: BoxFit.contain,
             ),
-            //SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
@@ -33,22 +38,17 @@ class PetNutritionScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => IngredientInputScreen()),
+                  MaterialPageRoute(builder: (context) => IngredientInputScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                // Setting the shape of the button to be a rounded rectangle
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(19),
                 ),
-                backgroundColor:
-                    Colors.transparent, // This ensures the gradient is visible
+                backgroundColor: Colors.transparent,
               ).copyWith(
-                // Adding the gradient using decoration
                 backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                elevation:
-                    MaterialStateProperty.all(0), // Optional: remove elevation
+                elevation: MaterialStateProperty.all(0),
               ),
             ).buildGradient(),
           ],
@@ -97,16 +97,14 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
                     border: Border.all(color: AppColors.darkGreen),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25, bottom: 20),
+                    padding: const EdgeInsets.only(left: 25.0, right: 25, bottom: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(height: 15),
                         const Text(
                           "Pet Breed",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         TextFieldInput(
                           hintText: 'Enter your pet\'s breed',
@@ -115,25 +113,23 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
                         ),
                         SizedBox(height: 24),
                         ...List.generate(
-                            5,
-                            (index) => Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Ingredient ${index + 1}",
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    TextFieldInput(
-                                      hintText: 'Enter ingredient ${index + 1}',
-                                      textEditingController:
-                                          _ingredientControllers[index],
-                                      textInputType: TextInputType.text,
-                                    ),
-                                    SizedBox(height: 24),
-                                  ],
-                                )),
+                          5,
+                          (index) => Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Ingredient ${index + 1}",
+                                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                              ),
+                              TextFieldInput(
+                                hintText: 'Enter ingredient ${index + 1}',
+                                textEditingController: _ingredientControllers[index],
+                                textInputType: TextInputType.text,
+                              ),
+                              SizedBox(height: 24),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -147,23 +143,25 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => LoadingScreen()),
+                          builder: (context) => LoadingScreen(
+                            breed: _breedController.text,
+                            ingredients: _ingredientControllers
+                                .map((controller) => controller.text)
+                                .where((ingredient) => ingredient.isNotEmpty)
+                                .toList(),
+                          ),
+                        ),
                       );
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    // Setting the shape of the button to be a rounded rectangle
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(19),
                     ),
-                    backgroundColor: Colors
-                        .transparent, // This ensures the gradient is visible
+                    backgroundColor: Colors.transparent,
                   ).copyWith(
-                    // Adding the gradient using decoration
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.transparent),
-                    elevation: MaterialStateProperty.all(
-                        0), // Optional: remove elevation
+                    backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                    elevation: MaterialStateProperty.all(0),
                   ),
                 ).buildGradient(),
                 SizedBox(height: 24),
@@ -177,6 +175,11 @@ class _IngredientInputScreenState extends State<IngredientInputScreen> {
 }
 
 class LoadingScreen extends StatefulWidget {
+  final String breed;
+  final List<String> ingredients;
+
+  LoadingScreen({required this.breed, required this.ingredients});
+
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
 }
@@ -188,7 +191,12 @@ class _LoadingScreenState extends State<LoadingScreen> {
     Future.delayed(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => RecipeScreen()),
+        MaterialPageRoute(
+          builder: (context) => RecipeScreen(
+            breed: widget.breed,
+            ingredients: widget.ingredients,
+          ),
+        ),
       );
     });
   }
@@ -209,6 +217,11 @@ class _LoadingScreenState extends State<LoadingScreen> {
 }
 
 class RecipeScreen extends StatefulWidget {
+  final String breed;
+  final List<String> ingredients;
+
+  RecipeScreen({required this.breed, required this.ingredients});
+
   @override
   _RecipeScreenState createState() => _RecipeScreenState();
 }
@@ -217,6 +230,8 @@ class _RecipeScreenState extends State<RecipeScreen> {
   String recipeName = '';
   String cookingMethod = '';
   String recipeImage = '';
+  String note = '';
+  bool isLoading = true;
 
   @override
   void initState() {
@@ -225,46 +240,68 @@ class _RecipeScreenState extends State<RecipeScreen> {
   }
 
   Future<void> fetchRecipe() async {
-    // Replace with your actual API endpoint
-    // final response =
-    //     await http.get(Uri.parse('https://your-api-endpoint.com/recipe'));
+    final url = Uri.parse('https://8ac1-2409-40c0-105f-b7a7-45d5-a4de-ac60-cb3a.ngrok-free.app/predict_pet_food');
+    final headers = {'Content-Type': 'application/json'};
+    final body = json.encode({
+      'breed': widget.breed,
+      'ingredients': widget.ingredients.join(' ')
+    });
 
-    // if (response.statusCode == 200) {
-    //   final data = json.decode(response.body);
-    //   setState(() {
-    //     recipeName = data['recipe_name'];
-    //     cookingMethod = data['cooking_method'];
-    //     recipeImage = data['recipe_image'];
-    //   });
-    // } else {
-    //   // Handle error
-    //   print('Failed to fetch recipe');
-    // }
+    try {
+      final response = await http.post(url, headers: headers, body: body);
+
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body);
+        setState(() {
+          recipeName = data['recipe_name'];
+          cookingMethod = data['cooking_method'];
+          note = data['note'];
+          isLoading = false;
+        });
+      } else {
+        throw Exception('Failed to fetch recipe');
+      }
+    } catch (e) {
+      print('Error: $e');
+      setState(() {
+        isLoading = false;
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to fetch recipe. Please try again.')),
+      );
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Your Pet Recipe')),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(recipeName,
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-            SizedBox(height: 20),
-            if (recipeImage.isNotEmpty)
-              Image.network(recipeImage,
-                  height: 200, width: double.infinity, fit: BoxFit.cover),
-            SizedBox(height: 20),
-            Text('Cooking Method:',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            SizedBox(height: 10),
-            Text(cookingMethod),
-          ],
-        ),
-      ),
+      body: isLoading
+          ? Center(child: CircularProgressIndicator())
+          : SingleChildScrollView(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(recipeName,
+                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                  SizedBox(height: 20),
+                  if (recipeImage.isNotEmpty)
+                    Image.network(recipeImage,
+                        height: 200, width: double.infinity, fit: BoxFit.cover),
+                  SizedBox(height: 20),
+                  Text('Cooking Method:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  SizedBox(height: 10),
+                  Text(cookingMethod),
+                  SizedBox(height: 20),
+                  Text('Note:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  SizedBox(height: 10),
+                  Text(note),
+                ],
+              ),
+            ),
     );
   }
 }
@@ -275,13 +312,13 @@ extension GradientElevatedButton on ElevatedButton {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 156, 219, 166), // Start color
-            Color.fromARGB(255, 226, 249, 205), // End color
+            Color.fromARGB(255, 156, 219, 166),
+            Color.fromARGB(255, 226, 249, 205),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        borderRadius: BorderRadius.circular(19), // Rounded corners
+        borderRadius: BorderRadius.circular(19),
       ),
       child: this,
     );
