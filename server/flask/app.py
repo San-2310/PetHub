@@ -3,7 +3,6 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'  # Disable oneDNN custom operations
 
 from flask import Flask, request, jsonify, render_template
 from tensorflow.keras.models import load_model
-from tensorflow.keras.layers import TextVectorization
 import numpy as np
 import pandas as pd
 import joblib
@@ -15,15 +14,13 @@ app = Flask(__name__)
 
 # Global variables to store models and preprocessors
 animal_model = None
-toxicity_model = None
 pet_food_model = None
 preprocessor = None
 label_encoder = None
-vectorizer = None
 models_loaded = False
 
 def load_models():
-    global animal_model, toxicity_model, pet_food_model, preprocessor, label_encoder, vectorizer, models_loaded
+    global animal_model, pet_food_model, preprocessor, label_encoder, models_loaded
     
     if not models_loaded:
         print("Loading models...")
@@ -31,18 +28,6 @@ def load_models():
         animal_model = load_model('animalcondition/animal_danger_model.h5')
         preprocessor = joblib.load('animalcondition/preprocessor.pkl')
         label_encoder = joblib.load('animalcondition/label_encoder.pkl')
-
-        # Load model for comment toxicity prediction
-        toxicity_model = load_model('checkcommenttoxicity/toxicity.h5')
-
-        # Load dataset to adapt the TextVectorization
-        df = pd.read_csv('checkcommenttoxicity/train.csv')
-        MAX_FEATURES = 200000
-
-        vectorizer = TextVectorization(max_tokens=MAX_FEATURES,
-                                       output_sequence_length=2000,
-                                       output_mode='int')
-        vectorizer.adapt(df['comment_text'].values)
 
         # Load the pet food prediction model
         pet_food_model = PetFoodModel.load_model('./petfoodrecipe/pet_food_model.joblib')
@@ -81,17 +66,6 @@ def predict_animal():
         'prediction': str(predicted_label),
         'probability': float(prediction[0][0])
     })
-
-@app.route('/check_comment_toxicity', methods=['POST'])
-def predict_toxicity():
-    data = request.json
-    comment_text = data['text']
-    
-    vectorized_text = vectorizer([comment_text])
-    
-    prediction = (toxicity_model.predict(vectorized_text) > 0.5).astype(int).tolist()
-    
-    return jsonify({'prediction': prediction})
 
 @app.route('/analyze_medical_reports', methods=['POST'])
 def analyze_medical_reports():

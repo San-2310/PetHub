@@ -12,6 +12,7 @@ import 'package:manipal_app/screens/pet_travel/pet_travel_screen.dart';
 import 'package:manipal_app/screens/train_pet/basics_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:manipal_app/screens/summarizer/summarizer.dart';
+import 'package:manipal_app/screens/add_pet_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
@@ -42,8 +43,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
-        actions: [],
+        actions: [
+          IconButton(
+            icon: Icon(Icons.pets),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AddPetScreen()),
+              );
+            },
+          ),
+        ],
       ),
+      
       drawer: AppDrawer(currentRoute: '/home'),
       body: SingleChildScrollView(
         child: Padding(

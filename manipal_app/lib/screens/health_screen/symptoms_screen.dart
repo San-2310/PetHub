@@ -109,52 +109,46 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
   // }
 
   Future<void> sendRequest() async {
-  if (selectedSymptoms.isEmpty) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Please select at least one symptom')),
+    if (selectedSymptoms.length != 5) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Please select exactly 5 symptoms')),
+      );
+      return;
+    }
+
+    final url = Uri.parse('https://8ac1-2409-40c0-105f-b7a7-45d5-a4de-ac60-cb3a.ngrok-free.app/check_animal_condition');
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({
+        'AnimalName': animalName,
+        'symptoms1': selectedSymptoms[0],
+        'symptoms2': selectedSymptoms[1],
+        'symptoms3': selectedSymptoms[2],
+        'symptoms4': selectedSymptoms[3],
+        'symptoms5': selectedSymptoms[4],
+      }),
     );
-    return;
+
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      final prediction = result['prediction'];
+      final probability = result['probability'] as double;
+      
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => prediction == 'Yes'
+              ? DangerScreen(animalName: animalName, probability: probability)
+              : SafeScreen(animalName: animalName, probability: probability),
+        ),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error sending request')),
+      );
+    }
   }
-
-  // Ensure we send exactly 5 symptoms by padding the list with empty strings
-  List<String> paddedSymptoms = List.from(selectedSymptoms);
-  while (paddedSymptoms.length < 5) {
-    paddedSymptoms.add(''); // Pad with empty strings if less than 5 symptoms
-  }
-
-  final url = Uri.parse('https://e4da-45-112-144-64.ngrok-free.app/check_animal_condition');
-  final response = await http.post(
-    url,
-    headers: {'Content-Type': 'application/json'},
-    body: json.encode({
-      'AnimalName': animalName,
-      'symptoms1': paddedSymptoms[0],  // Use paddedSymptoms instead of selectedSymptoms
-      'symptoms2': paddedSymptoms[1],
-      'symptoms3': paddedSymptoms[2],
-      'symptoms4': paddedSymptoms[3],
-      'symptoms5': paddedSymptoms[4],
-    }),
-  );
-
-  if (response.statusCode == 200) {
-    final result = json.decode(response.body);
-    final prediction = result['prediction'];
-    final probability = result['probability'] as double;
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => prediction == 'Yes'
-            ? DangerScreen(animalName: animalName, probability: probability)
-            : SafeScreen(animalName: animalName, probability: probability),
-      ),
-    );
-  } else {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Error sending request')),
-    );
-  }
-}
 
   @override
   Widget build(BuildContext context) {
@@ -169,7 +163,7 @@ class _SymptomsScreenState extends State<SymptomsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Select exactly 5 symptoms',
+                'Select up to 5 symptoms',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -330,12 +324,12 @@ class _DangerScreenState extends State<DangerScreen> with SingleTickerProviderSt
               ),
               SizedBox(height: 20),
               Text(
-                'Oh no!',
+                'Warning',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
               Text(
-                'Your ${widget.animalName} might need help!',
+                'Your pet is not well.',
                 style: TextStyle(fontSize: 18),
                 textAlign: TextAlign.center,
               ),
@@ -447,7 +441,6 @@ class _SafeScreenState extends State<SafeScreen> with SingleTickerProviderStateM
                 },
                 child: Text('Back to Symptoms'),
                 style: ElevatedButton.styleFrom(
-                 // primary: Colors.blue,
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 ),
               ),
@@ -479,7 +472,7 @@ class GradedMeter extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: (200 - 20) * value,
+            left: math.max(10.0, math.min((200 - 20) * value, 190.0)), // Keep circle between left and center
             child: Container(
               width: 20,
               height: 20,
