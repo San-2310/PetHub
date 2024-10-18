@@ -6,6 +6,7 @@ import 'package:manipal_app/screens/auth_screens/login.dart';
 import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:manipal_app/models/pet.dart';
 
 
 class UserScreen extends StatelessWidget {
